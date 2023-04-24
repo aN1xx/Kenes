@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-eiba#$a5%q_s25c^pf&x5693l7!on2@-j#%0!=j$$o4x!snoiq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '0.0.0.0']
 
 if DEBUG:
     ALLOWED_HOSTS += ['*']
@@ -33,14 +34,49 @@ if DEBUG:
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.forms',
 ]
+THIRD_PARTY_APPS = [
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'corsheaders',
+    'drf_spectacular',
+]
+LOCAL_APPS = [
+    'apps.users',
+    'apps.mentors',
+    'apps.common',
+]
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+]
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
+]
+
+AUTH_USER_MODEL = 'users.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -53,6 +89,23 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'config.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'SIGNING_KEY': SECRET_KEY,
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    # "Bearer <Token>"
+}
 
 TEMPLATES = [
     {
@@ -69,6 +122,25 @@ TEMPLATES = [
         },
     },
 ]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s '
+            '%(process)d %(thread)d %(message)s',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'root': {'level': 'INFO', 'handlers': ['console']},
+}
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -106,7 +178,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'Asia/Almaty'
 
@@ -124,3 +196,18 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_URLS_REGEX = r'^/api/.*$'
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Django website API',
+    'DESCRIPTION': 'Documentation of API endpoints of Django website',
+    'COMPONENT_SPLIT_REQUEST': True,
+    'VERSION': '1.0.0',
+    'SERVE_PERMISSIONS': ['rest_framework.permissions.AllowAny'],
+    'SERVERS': [
+        {'url': 'http://0.0.0.0:8000', 'description': 'Local Development server'},
+    ],
+}
