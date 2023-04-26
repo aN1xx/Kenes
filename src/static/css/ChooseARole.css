@@ -1,0 +1,327 @@
+.card-item,
+.image-43-icon1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.image-43-icon1 {
+  height: 99.99%;
+  width: 100%;
+  right: 0;
+  bottom: 0.01%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.card-item {
+  height: calc(100% - 0.01px);
+  width: calc(100% + 0.17px);
+  right: -0.17px;
+  bottom: 0.01px;
+  border-radius: var(--br-11xs);
+  background-color: var(--white);
+}
+.card1,
+.item,
+.mask3 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.mask3 {
+  border-radius: var(--br-9xs);
+  background-color: var(--color-gainsboro);
+}
+.item {
+  background-color: var(--color-darkslategray);
+}
+.div17,
+.label2 {
+  position: absolute;
+  top: calc(50% - 6.5px);
+}
+.div17 {
+  left: 7.38%;
+  text-transform: uppercase;
+}
+.label2 {
+  width: calc(100% - 31.83px);
+  right: 15.83px;
+  left: 16px;
+  height: 13px;
+}
+.button2 {
+  position: absolute;
+  width: 48.03%;
+  top: calc(50% + 33.52px);
+  right: 25.99%;
+  left: 25.99%;
+  height: 40px;
+}
+.paragraph10 {
+  position: absolute;
+  height: 35.81%;
+  width: 100%;
+  top: 26.35%;
+  left: 0;
+  font-size: var(--font-size-base);
+  line-height: 24px;
+  color: var(--color-darkgray);
+  display: inline-block;
+}
+.title10 {
+  position: absolute;
+  top: calc(50% - 74.48px);
+  left: 36.21%;
+  font-size: var(--font-size-2xl);
+  line-height: 31px;
+  color: var(--color-dimgray);
+}
+.group5 {
+  position: absolute;
+  height: 71.84%;
+  width: 78.76%;
+  top: 14.08%;
+  right: 10.62%;
+  bottom: 14.08%;
+  left: 10.62%;
+  overflow: hidden;
+}
+.content3,
+.top1 {
+  position: absolute;
+  height: 38.01%;
+  width: 53.61%;
+  top: 57.2%;
+  right: 23.19%;
+  bottom: 4.8%;
+  left: 23.19%;
+  display: none;
+}
+.top1 {
+  height: 94.04%;
+  width: 45.83%;
+  top: 5.96%;
+  right: 54.17%;
+  bottom: 0;
+  left: 0;
+  font-size: var(--text-xs-medium-size);
+}
+.choose-a-role-child {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 660px;
+  height: 964px;
+  object-fit: cover;
+}
+.clarityplay-solid-icon2 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.learn-how-kenes2 {
+  position: relative;
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-ubuntu);
+  color: var(--white);
+  text-align: left;
+}
+.video2 {
+  cursor: pointer;
+  border: 1px solid var(--white);
+  padding: var(--padding-3xs);
+  background-color: var(--color-gray-200);
+  position: absolute;
+  top: 611px;
+  left: 58px;
+  border-radius: var(--br-8xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+}
+.join-our-community3,
+.paragraph11 {
+  font-weight: 500;
+  display: inline-block;
+}
+.join-our-community3 {
+  margin: 0;
+  position: absolute;
+  top: 525px;
+  left: 58px;
+  font-size: var(--font-size-5xl);
+  line-height: 30px;
+  text-align: left;
+  width: 492px;
+}
+.paragraph11 {
+  position: relative;
+  line-height: 55px;
+  width: 528px;
+  flex-shrink: 0;
+}
+.text13 {
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-3xs) 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.quote7,
+.text14 {
+  margin: 0;
+  font-family: inherit;
+}
+.quote7 {
+  position: absolute;
+  top: 369px;
+  left: 58px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: var(--font-size-29xl);
+}
+.text14 {
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+}
+.paragraph-black2 {
+  margin: 0;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  line-height: 24px;
+  color: var(--color);
+  text-align: center;
+}
+.header4 {
+  position: absolute;
+  top: 283px;
+  left: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+  text-align: right;
+  font-size: var(--font-size-47xl);
+  color: var(--color2);
+}
+.image-9-icon {
+  position: relative;
+  width: 172px;
+  height: 172px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.illustration {
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-3xs);
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.mentee4 {
+  position: relative;
+  line-height: 24px;
+}
+.lorem-ipsum-dolor2 {
+  position: relative;
+  line-height: 21px;
+  display: inline-block;
+  width: 250px;
+  flex-shrink: 0;
+}
+.description25 {
+  display: flex;
+  flex-direction: row;
+  padding: 0 var(--padding-3xs) var(--padding-3xs);
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: var(--font-size-sm);
+  color: var(--color-darkgray);
+}
+.mentee2,
+.mentee5 {
+  position: absolute;
+  top: 453px;
+  left: 720px;
+  border-radius: var(--br-8xs);
+  background-color: var(--white);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-3xs);
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+  cursor: pointer;
+  color: var(--color-slategray);
+}
+.mentee5 {
+  top: 454px;
+  left: 1066px;
+}
+.transparent-frame1 {
+  position: absolute;
+  top: 61px;
+  left: 660px;
+  width: 780px;
+  height: 963px;
+  overflow: hidden;
+  display: none;
+}
+.union-icon6 {
+  position: relative;
+  width: 105px;
+  height: 38px;
+  flex-shrink: 0;
+  mix-blend-mode: normal;
+}
+.logo6 {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-2xs) 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+.choose-a-role,
+.navbar-logo4 {
+  background-color: var(--white);
+  width: 100%;
+}
+.navbar-logo4 {
+  position: absolute;
+  height: 5.86%;
+  top: 0.1%;
+  right: 0;
+  bottom: 94.04%;
+  left: 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding-45xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.choose-a-role {
+  position: relative;
+  height: 1024px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-13xl);
+  color: var(--white);
+  font-family: var(--font-ubuntu);
+}

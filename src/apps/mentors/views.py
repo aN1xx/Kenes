@@ -9,15 +9,13 @@ from .serializers import MentorSerializer
 from .filters import MentorFilter
 
 
-@extend_schema(
-    responses=MentorSerializer,
-    description='Search API description',
-)
-class MentorSearchAPIView(
-    generics.GenericAPIView,
-    mixins.ListModelMixin,
-):
-    queryset = Mentor.objects.all()
-    serializer_class = MentorSerializer
-    filter_backends = [filters.DjangoFilterBackend]
-    filterset_class = MentorFilter
+def index(request):
+    return render(request, 'index.html')
+
+
+def sign_in(request):
+    return render(request, 'SignIn.html')
+
+
+def sign_up(request):
+    return render(request, 'SignUp.html')

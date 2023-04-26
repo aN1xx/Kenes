@@ -4,8 +4,7 @@ from . import views
 
 
 urlpatterns = [
-    path(
-        'search/',
-        views.MentorSearchAPIView.as_view(),
-    ),
+    path('', views.index, name='index'),
+    path('sign-in/', views.sign_in, name='sign-in'),
+    path('sign-up/', views.sign_up, name='sign-up'),
 ]

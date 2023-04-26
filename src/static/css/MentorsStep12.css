@@ -1,0 +1,223 @@
+.mentors-step-7-child {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 660px;
+  height: 964px;
+  object-fit: cover;
+}
+.paragraph21 {
+  position: relative;
+  line-height: 55px;
+  font-weight: 500;
+  display: inline-block;
+  width: 528px;
+  flex-shrink: 0;
+}
+.paragraph-wrapper1,
+.quote16,
+.text30 {
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-3xs);
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.quote16,
+.text30 {
+  flex-direction: column;
+  padding: var(--padding-3xs) 0;
+}
+.quote16 {
+  position: absolute;
+  top: 382px;
+  left: 48px;
+  width: 563px;
+  padding: var(--padding-3xs) 0 var(--padding-3xs) var(--padding-3xs);
+  box-sizing: border-box;
+}
+.background10 {
+  width: 100%;
+  top: 0;
+  right: 0;
+  border-radius: var(--br-21xl);
+  background-color: var(--color3);
+  height: 8px;
+}
+.background10,
+.mask12,
+.progress32 {
+  position: absolute;
+  left: 0;
+}
+.mask12 {
+  width: 100%;
+  top: 0;
+  right: 0;
+  border-radius: var(--br-9xs);
+  background-color: var(--color3);
+  height: 8px;
+}
+.progress32 {
+  top: calc(50% - 6.5px);
+}
+.group14 {
+  position: absolute;
+  height: 162.5%;
+  width: 102.81%;
+  top: -50%;
+  right: 97.19%;
+  bottom: -12.5%;
+  left: -100%;
+  overflow: hidden;
+}
+.content12,
+.progress31 {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+.content12 {
+  left: -214px;
+  background-color: var(--color2);
+  width: 463px;
+}
+.progress31 {
+  width: 100%;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+.progress-bar-v110 {
+  position: relative;
+  width: 249px;
+  height: 8px;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--text-xs-medium-size);
+}
+.progress30 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+  text-align: center;
+}
+.text31 {
+  position: relative;
+  display: inline-block;
+  width: 362px;
+  flex-shrink: 0;
+}
+.emojione-monotonesparkles-icon1 {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.header13,
+.text-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.text-container {
+  width: 640px;
+  flex-direction: row;
+  align-items: center;
+}
+.header13 {
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: var(--font-size-29xl);
+  color: var(--color2);
+}
+.your-application-is {
+  margin: 0;
+}
+.to-review-it {
+  font-family: var(--font-ubuntu);
+}
+.paragraph-black-container {
+  position: relative;
+  line-height: 24px;
+}
+.go-to-my1 {
+  position: relative;
+  font-size: var(--font-size-13xl);
+  font-family: var(--font-ubuntu);
+  color: var(--white);
+  text-align: left;
+}
+.create3 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-xl) var(--padding-11xl);
+  background-color: var(--color);
+  border-radius: var(--br-8xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.application-form9,
+.paragraph-black-center-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-11xl);
+}
+.application-form9 {
+  position: absolute;
+  top: 190px;
+  left: 720px;
+  gap: var(--gap-xl);
+  font-size: var(--font-size-5xl);
+  color: var(--color);
+}
+.union-icon15 {
+  position: relative;
+  width: 105px;
+  height: 38px;
+  flex-shrink: 0;
+  mix-blend-mode: normal;
+}
+.logo15 {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-2xs) 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mentors-step-7,
+.navbar-logo13 {
+  background-color: var(--white);
+  width: 100%;
+}
+.navbar-logo13 {
+  position: absolute;
+  height: 5.86%;
+  top: 0.1%;
+  right: 0;
+  bottom: 94.04%;
+  left: 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding-45xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.mentors-step-7 {
+  position: relative;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-29xl);
+  color: var(--white);
+  font-family: var(--font-ubuntu);
+}

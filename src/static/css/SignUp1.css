@@ -1,0 +1,459 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.card-child1,
+.image-43-icon2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.image-43-icon2 {
+  height: 99.99%;
+  width: 100%;
+  right: 0;
+  bottom: 0.01%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.card-child1 {
+  height: calc(100% - 0.01px);
+  width: calc(100% + 0.35px);
+  right: -0.35px;
+  bottom: 0.01px;
+  border-radius: var(--br-11xs);
+  background-color: var(--white);
+}
+.card6,
+.inner,
+.mask17 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.mask17 {
+  border-radius: var(--br-9xs);
+  background-color: var(--color-gainsboro);
+}
+.inner {
+  background-color: var(--color-darkslategray);
+}
+.div66,
+.label4 {
+  position: absolute;
+  top: calc(50% - 6.5px);
+}
+.div66 {
+  left: 12.85%;
+  text-transform: uppercase;
+}
+.label4 {
+  width: calc(100% - 31.65px);
+  right: 15.65px;
+  left: 16px;
+  height: 13px;
+}
+.button14 {
+  position: absolute;
+  width: 48.03%;
+  top: calc(50% + 33.52px);
+  right: 25.99%;
+  left: 25.99%;
+  height: 40px;
+}
+.paragraph44 {
+  position: absolute;
+  height: 35.81%;
+  width: 100%;
+  top: 26.35%;
+  left: 0;
+  font-size: var(--font-size-base);
+  line-height: 24px;
+  color: var(--color-darkgray);
+  display: inline-block;
+}
+.title33 {
+  position: absolute;
+  top: calc(50% - 74.48px);
+  left: 37.56%;
+  font-size: var(--font-size-2xl);
+  line-height: 31px;
+  color: var(--color-dimgray);
+}
+.group27 {
+  position: absolute;
+  height: 71.84%;
+  width: 78.76%;
+  top: 14.08%;
+  right: 10.62%;
+  bottom: 14.08%;
+  left: 10.62%;
+  overflow: hidden;
+}
+.content18 {
+  position: absolute;
+  height: 38.01%;
+  width: 53.61%;
+  top: 57.2%;
+  right: 23.19%;
+  bottom: 4.8%;
+  left: 23.19%;
+  display: none;
+}
+.sign-up-item,
+.top2 {
+  position: absolute;
+  left: 0;
+}
+.top2 {
+  height: 94.04%;
+  width: 51.25%;
+  top: 5.96%;
+  right: 48.75%;
+  bottom: 0;
+  display: none;
+  text-align: center;
+}
+.sign-up-item {
+  top: 61px;
+  width: 738px;
+  height: 963px;
+  object-fit: cover;
+  opacity: 0;
+}
+.sign-up-item.animate {
+  animation: 1s ease 0s 1 normal forwards fade-in;
+}
+.assem-kairatkyzy2 {
+  font-size: var(--font-size-13xl);
+}
+.assem-kairatkyzy2,
+.junior-ux-designer2 {
+  position: relative;
+  line-height: 35px;
+}
+.cilocation-icon6 {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.kazakhstan4 {
+  display: flex;
+  flex-direction: row;
+  padding: 0 var(--padding-3xs) 0 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+.description59 {
+  height: 119px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.vector-icon83 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.biarrow-right-circle7 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.description-group {
+  position: absolute;
+  top: 841px;
+  left: 56px;
+  width: 633px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size-5xl);
+}
+.bxsquote-alt-left-icon2 {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.paragraph45 {
+  position: relative;
+  line-height: 50px;
+  display: inline-block;
+  width: 600px;
+  flex-shrink: 0;
+}
+.quote24 {
+  position: absolute;
+  top: 417px;
+  left: 29px;
+  width: 670px;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-3xs);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: var(--font-size-21xl);
+}
+.h2-gray4 {
+  position: relative;
+  text-decoration: underline;
+}
+.h2-gray5 {
+  position: relative;
+  cursor: pointer;
+}
+.sign-links2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-21xl);
+}
+.a-place-for2,
+.h2-black2 {
+  position: relative;
+  line-height: 64px;
+}
+.h2-black2 {
+  font-size: var(--font-size-17xl);
+  color: var(--color2);
+}
+.a-place-for2 {
+  font-size: var(--font-size-5xl);
+  display: flex;
+  align-items: center;
+  width: 271px;
+}
+.sign-up-with2 {
+  position: relative;
+  font-size: var(--font-size-base);
+  font-family: var(--font-ubuntu);
+  color: var(--color);
+  text-align: left;
+}
+.google-sign2 {
+  cursor: pointer;
+  border: 1px solid var(--color);
+  padding: var(--padding-3xs);
+  background-color: var(--white);
+  border-radius: var(--br-8xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.sign-up-with3 {
+  margin: 0;
+}
+.sign-up-with-container1 {
+  position: relative;
+  font-size: var(--font-size-base);
+  font-family: var(--font-ubuntu);
+  color: var(--color);
+  text-align: left;
+  display: inline-block;
+  width: 162px;
+  height: 17px;
+  flex-shrink: 0;
+}
+.socials2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-15xl);
+}
+.sign-links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-4xs);
+}
+.or-child1,
+.or5 {
+  position: relative;
+}
+.or-child1 {
+  width: 218px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.or5 {
+  line-height: 64px;
+  font-weight: 300;
+}
+.email2,
+.or4 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.or4 {
+  width: 499px;
+  padding: var(--padding-3xs);
+  gap: var(--gap-3xs);
+  font-size: var(--font-size-5xl);
+}
+.email2 {
+  border: 1px solid var(--color);
+  font-weight: 300;
+  font-family: var(--font-ubuntu);
+  font-size: var(--font-size-xl);
+  background-color: var(--color3);
+  align-self: stretch;
+  border-radius: var(--br-8xs);
+  height: 64px;
+  flex-shrink: 0;
+  padding: 0 var(--padding-xl);
+}
+.email2:active,
+.password2 {
+  height: 64px;
+  border: 1px solid var(--color-midnightblue-100);
+  box-sizing: border-box;
+}
+.password2 {
+  border: 1px solid var(--color);
+  font-weight: 300;
+  font-family: var(--font-ubuntu);
+  font-size: var(--font-size-xl);
+  background-color: var(--color3);
+  align-self: stretch;
+  border-radius: var(--br-8xs);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0 var(--padding-xl);
+  align-items: center;
+  justify-content: space-between;
+}
+.terms-of-use2 {
+  text-decoration: underline;
+}
+.by-clicking-sign-container2 {
+  position: relative;
+  line-height: 64px;
+  font-weight: 300;
+  display: inline-block;
+  width: 460px;
+  height: 64px;
+  flex-shrink: 0;
+}
+.by-clicking-sign-up-you-agr-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  padding: 0 var(--padding-3xs);
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  font-size: var(--font-size-sm);
+}
+.create-an-account1 {
+  position: relative;
+  font-size: var(--font-size-13xl);
+  font-family: var(--font-ubuntu);
+  color: var(--white);
+  text-align: left;
+}
+.create4,
+.sign1 {
+  display: flex;
+  align-items: center;
+}
+.create4 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-xl) var(--padding-11xl);
+  background-color: var(--color4);
+  align-self: stretch;
+  border-radius: var(--br-8xs);
+  flex-direction: row;
+  justify-content: center;
+}
+.sign1 {
+  position: absolute;
+  top: 187px;
+  left: 839.5px;
+  height: 650px;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: var(--font-size-13xl);
+  color: var(--color);
+}
+.union-icon27 {
+  position: relative;
+  width: 105px;
+  height: 38px;
+  flex-shrink: 0;
+  mix-blend-mode: normal;
+}
+.logo27 {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-2xs) 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+.navbar-logo18,
+.sign-up3 {
+  background-color: var(--white);
+}
+.navbar-logo18 {
+  position: absolute;
+  top: 1px;
+  left: calc(50% - 720px);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  width: 1440px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding-45xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.sign-up3 {
+  position: relative;
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--text-xs-medium-size);
+  color: var(--white);
+  font-family: var(--font-ubuntu);
+}

@@ -1,0 +1,423 @@
+.mentees-step-1-child {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 660px;
+  height: 964px;
+  object-fit: cover;
+}
+.join-our-community1,
+.paragraph5 {
+  font-weight: 500;
+  display: inline-block;
+}
+.join-our-community1 {
+  position: absolute;
+  top: 524px;
+  left: 48px;
+  line-height: 30px;
+  width: 492px;
+}
+.paragraph5 {
+  position: relative;
+  line-height: 55px;
+  width: 528px;
+  flex-shrink: 0;
+}
+.quote3,
+.text8 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.text8 {
+  padding: var(--padding-3xs) 0;
+}
+.quote3 {
+  position: absolute;
+  top: 382px;
+  left: 48px;
+  font-size: var(--font-size-29xl);
+}
+.vector-icon9 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.biarrow-right-circle,
+.biarrow-right-circle-icon {
+  position: absolute;
+  top: 943px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.biarrow-right-circle {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  left: 1076px;
+}
+.biarrow-right-circle-icon {
+  left: 975px;
+}
+.clarityplay-solid-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.learn-how-kenes {
+  position: relative;
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-ubuntu);
+  color: var(--white);
+  text-align: left;
+}
+.video {
+  cursor: pointer;
+  border: 1px solid var(--white);
+  padding: var(--padding-3xs);
+  background-color: var(--color-gray-200);
+  position: absolute;
+  top: 612px;
+  left: 48px;
+  border-radius: var(--br-8xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+}
+.paragraph-black {
+  position: relative;
+  line-height: 24px;
+}
+.background {
+  width: 100%;
+  top: 0;
+  right: 0;
+  border-radius: var(--br-21xl);
+  background-color: var(--color3);
+  height: 8px;
+}
+.background,
+.mask,
+.progress2 {
+  position: absolute;
+  left: 0;
+}
+.mask {
+  width: 100%;
+  top: 0;
+  right: 0;
+  border-radius: var(--br-9xs);
+  background-color: var(--color3);
+  height: 8px;
+}
+.progress2 {
+  top: calc(50% - 6.5px);
+}
+.group2 {
+  position: absolute;
+  height: 162.5%;
+  width: 102.81%;
+  top: -50%;
+  right: 97.19%;
+  bottom: -12.5%;
+  left: -100%;
+  overflow: hidden;
+}
+.content,
+.progress1 {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+.content {
+  left: -214px;
+  background-color: var(--color2);
+  width: 249px;
+}
+.progress1 {
+  width: 100%;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+.progress-bar-v1 {
+  position: relative;
+  width: 249px;
+  height: 8px;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--text-xs-medium-size);
+  color: var(--color2);
+}
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+  font-size: var(--font-size-5xl);
+}
+.text9 {
+  position: relative;
+  display: inline-block;
+  width: 678px;
+}
+.header2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: var(--font-size-29xl);
+  color: var(--color2);
+}
+.prompt,
+.question {
+  display: flex;
+  flex-direction: row;
+}
+.question {
+  padding: var(--padding-3xs) var(--padding-3xs) var(--padding-3xs) 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.prompt {
+  border: 1px solid var(--color);
+  font-weight: 300;
+  font-family: var(--font-ubuntu);
+  font-size: var(--font-size-5xl);
+  background-color: var(--color3);
+  border-radius: var(--br-8xs);
+  box-sizing: border-box;
+  width: 469px;
+  height: 64px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.option,
+.option1,
+.option2,
+.question1,
+.textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.question1 {
+  padding: var(--padding-3xs) var(--padding-3xs) var(--padding-3xs) 0;
+  color: var(--color-slategray-200);
+}
+.option,
+.option1,
+.option2,
+.textbox {
+  height: 142px;
+  flex-shrink: 0;
+}
+.option,
+.option1,
+.option2 {
+  border: 1px solid var(--color);
+  font-weight: 300;
+  font-family: var(--font-ubuntu);
+  font-size: var(--font-size-5xl);
+  background-color: var(--color3);
+  border-radius: var(--br-8xs);
+  box-sizing: border-box;
+  width: 82px;
+  height: 48px;
+  flex-direction: row;
+  padding: var(--padding-3xs) var(--padding-xl);
+  align-items: center;
+  justify-content: center;
+}
+.option1,
+.option2 {
+  width: 74px;
+}
+.option2 {
+  width: 98px;
+}
+.date,
+.options {
+  display: flex;
+  align-items: flex-start;
+}
+.options {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.date {
+  flex-direction: column;
+  justify-content: center;
+}
+.options1,
+.questions {
+  display: flex;
+  flex-direction: row;
+}
+.options1 {
+  border-radius: var(--br-8xs);
+  background-color: var(--color3);
+  border: 1px solid var(--color);
+  box-sizing: border-box;
+  width: 140px;
+  height: 48px;
+  flex-shrink: 0;
+  padding: 0 0 0 var(--padding-3xs);
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xl);
+}
+.questions {
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-11xl);
+}
+.option3 {
+  width: 224px;
+  justify-content: center;
+  gap: var(--gap-3xs);
+}
+.option3,
+.option4,
+.option6 {
+  border-radius: var(--br-8xs);
+  background-color: var(--color3);
+  border: 1px solid var(--color);
+  box-sizing: border-box;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-3xs) var(--padding-xl);
+  align-items: center;
+}
+.option4 {
+  font-weight: 300;
+  font-family: var(--font-ubuntu);
+  font-size: var(--font-size-5xl);
+  width: 224px;
+  justify-content: flex-start;
+}
+.option6 {
+  width: 228px;
+  justify-content: center;
+  gap: var(--gap-3xs);
+}
+.atoms-icons-system-add {
+  position: relative;
+  border-radius: var(--br-81xl);
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.atoms-icons-system-add-wrapper {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.add-button {
+  padding: var(--padding-3xs);
+}
+.add-button,
+.fluency,
+.option-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.option-parent {
+  gap: var(--gap-xl);
+  font-size: var(--font-size-base);
+}
+.question6 {
+  padding: var(--padding-3xs) var(--padding-3xs) var(--padding-3xs) 0;
+  color: var(--color-lightslategray);
+}
+.application-form,
+.linkedin,
+.question6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.application-form {
+  position: absolute;
+  top: 190px;
+  left: 720px;
+  gap: var(--gap-xl);
+  text-align: center;
+  font-size: var(--font-size-xl);
+  color: var(--color);
+}
+.union-icon2 {
+  position: relative;
+  width: 105px;
+  height: 38px;
+  flex-shrink: 0;
+  mix-blend-mode: normal;
+}
+.logo2 {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-2xs) 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mentees-step-1,
+.navbar-logo {
+  background-color: var(--white);
+  width: 100%;
+}
+.navbar-logo {
+  position: absolute;
+  height: 5.86%;
+  top: 0.1%;
+  right: 0;
+  bottom: 94.04%;
+  left: 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding-45xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.mentees-step-1 {
+  position: relative;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--white);
+  font-family: var(--font-ubuntu);
+}
