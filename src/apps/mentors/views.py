@@ -95,6 +95,10 @@ def mentor_141(request):
     return render(request, 'MentorsStep141.html')
 
 
+def dashboard(request):
+    return render(request, 'Dashboard.html')
+
+
 @csrf_exempt
 def sign_up_validate(request):
     body = json.loads(request.body)

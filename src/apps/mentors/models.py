@@ -54,3 +54,12 @@ class Mentor(
         return ' {}'.format(
             ' '.join([i for i in [self.last_name, self.first_name, self.middle_name] if i]),
         )
+
+
+class Booking(models.Model):
+    user: 'User' = models.ForeignKey('users.User', on_delete=models.CASCADE)
+    slot_date = models.DateField()
+    slot_time = models.TimeField(choices=[('9:00', '9:00'), ('12:00', '12:00'), ('15:00', '15:00'), ('18:00', '18:00')])
+
+    class Meta:
+        unique_together = ('slot_date', 'slot_time')

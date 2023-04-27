@@ -24,4 +24,5 @@ urlpatterns = [
     path('mentor-13/', views.mentor_13, name='mentor-13'),
     path('mentor-14/', views.mentor_14, name='mentor-14'),
     path('mentor-141/', views.mentor_141, name='mentor-141'),
+    path('dashboard/', views.dashboard, name='dashboard'),
 ]
