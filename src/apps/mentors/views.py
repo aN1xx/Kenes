@@ -1,8 +1,9 @@
 import json
 from sqlite3 import IntegrityError
 
+from django.contrib.auth import authenticate, login, get_user_model
 from django.http import JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from drf_spectacular.utils import extend_schema
 from django.views.decorators.csrf import csrf_exempt
 
@@ -15,16 +16,49 @@ from .filters import MentorFilter
 from ..users.models import User
 
 
+User = get_user_model()
+
 def index(request):
     return render(request, 'index.html')
 
 
+@csrf_exempt
 def sign_in(request):
-    return render(request, 'SignIn.html')
+    if request.method == 'POST':
+        user = authenticate(request, username=request.POST['email'], password=request.POST['password'])
+
+        if user is not None:
+            login(request, user)
+            return redirect('/dashboard/')
+        else:
+            error_message = "Invalid email or password"
+            return render(request, 'SignIn.html', {'error_message': error_message})
+
+    else:
+        return render(request, 'SignIn.html')
 
 
 def sign_up(request):
-    return render(request, 'SignUp.html')
+    if request.method == 'POST':
+        username = request.POST['email']
+        password = request.POST['password']
+        try:
+            user = User.objects.create_user(username=username, password=password)
+
+        except Exception:
+            error_message = "Invalid email or password"
+            return render(request, 'SignUp.html', {'error_message': error_message})
+
+        if user is not None:
+            login(request, user)
+            # Redirect to a success page
+            return redirect('/choose-a-role/')
+        else:
+            # Show an error message
+            error_message = "Invalid email or password"
+            return render(request, 'SignUp.html', {'error_message': error_message})
+    else:
+        return render(request, 'SignUp.html')
 
 
 def mentee_1(request):
@@ -97,31 +131,3 @@ def mentor_141(request):
 
 def dashboard(request):
     return render(request, 'Dashboard.html')
-
-
-@csrf_exempt
-def sign_up_validate(request):
-    body = json.loads(request.body)
-    email = body.get("email", "")
-    password = body.get("password", "")
-
-    if not email:
-        result = {"success": False, "message": "email not found"}
-        return JsonResponse(result)
-
-    if not password:
-        result = {"success": False, "message": "password not found"}
-        return JsonResponse(result)
-
-    try:
-        User.objects.create(
-            email=email,
-            password=password
-        )
-    except IntegrityError:
-        result = {"success": False, "message": "user already exists"}
-        return JsonResponse(result)
-
-    request.session["auth_email"] = email
-    result = {"success": True}
-    return JsonResponse(result)

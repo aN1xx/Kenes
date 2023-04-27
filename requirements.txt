@@ -14,6 +14,7 @@ channels==3.0.5 # https://github.com/django/channels
 gunicorn==20.1.0  # https://github.com/benoitc/gunicorn
 num2words==0.5.12
 iuliia
+argon2-cffi
 
 # Django
 # ------------------------------------------------------------------------------

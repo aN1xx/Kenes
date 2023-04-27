@@ -114,19 +114,27 @@
           <div class="or1">or</div>
           <img class="or-child" alt="" src="{% static 'images/frame-972.svg' %}" />
         </div>
+        <form action="{% url 'api:sign-up' %}" method="POST" class="form" style="display:flex;flex-direction:column;gap:20px">
+
+          {% csrf_token %}
+
+
         <input
           class="email"
           type="email"
-          placeholder="Email Address"
+          name="email"
+          placeholder="Username"
           required
         />
 
         <input
           class="password"
           type="password"
+          name="password"
           placeholder="Password"
           required
         />
+
 
         <div class="by-clicking-sign-up-you-agr-wrapper">
           <div class="by-clicking-sign-container">
@@ -135,9 +143,10 @@
             <span class="terms-of-use">Privacy Policy</span>.
           </div>
         </div>
-        <button class="create" id="create">
+        <button class="create" id="create" type="submit">
           <div class="create-an-account">Create an account</div>
         </button>
+        </form>
       </div>
       <div class="navbar-logo1">
         <div class="logo3">
@@ -151,13 +160,6 @@
       if (h2Gray1) {
         h2Gray1.addEventListener("click", function (e) {
           window.location.href = "/sign-in/";
-        });
-      }
-      
-      var create = document.getElementById("create");
-      if (create) {
-        create.addEventListener("click", function (e) {
-          window.location.href = "/choose-a-role/";
         });
       }
       </script>

@@ -72,9 +72,13 @@
             <div class="or3">or</div>
             <div class="or-inner"></div>
           </div>
-          <input class="email1" type="email" placeholder="Email Address" />
+          <form action="{% url 'api:sign-in' %}" method="POST" class="form" style="display:flex;flex-direction:column;gap:20px">
 
-          <input class="password1" type="password" placeholder="Password" />
+            {% csrf_token %}
+
+          <input class="email1" type="email" placeholder="Username" name="email" />
+
+          <input class="password1" type="password" placeholder="Password" name="password" />
 
           <div class="remember-forgot-pass">
             <div class="item-0-parent">
@@ -89,9 +93,10 @@
             <span class="terms-of-use1">Terms of Use</span> and our
             <span class="terms-of-use1">Privacy Policy</span>.
           </div>
-          <button class="create1" id="create">
+          <button class="create1" id="create" type="submit">
             <div class="sign-in2">Sign In</div>
           </button>
+          </form>
         </div>
       </div>
       <div class="assem-kairatkyzy-parent">
@@ -121,13 +126,6 @@
       if (h2Gray) {
         h2Gray.addEventListener("click", function (e) {
           window.location.href = "/sign-up";
-        });
-      }
-      
-      var create = document.getElementById("create");
-      if (create) {
-        create.addEventListener("click", function (e) {
-          window.location.href = "/dashboard";
         });
       }
       </script>
