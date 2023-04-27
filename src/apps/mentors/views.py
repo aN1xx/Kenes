@@ -1,5 +1,10 @@
+import json
+from sqlite3 import IntegrityError
+
+from django.http import JsonResponse
 from django.shortcuts import render
 from drf_spectacular.utils import extend_schema
+from django.views.decorators.csrf import csrf_exempt
 
 from rest_framework import generics, mixins
 from django_filters import rest_framework as filters
@@ -7,6 +12,7 @@ from django_filters import rest_framework as filters
 from .models import Mentor
 from .serializers import MentorSerializer
 from .filters import MentorFilter
+from ..users.models import User
 
 
 def index(request):
@@ -87,3 +93,31 @@ def mentor_14(request):
 
 def mentor_141(request):
     return render(request, 'MentorsStep141.html')
+
+
+@csrf_exempt
+def sign_up_validate(request):
+    body = json.loads(request.body)
+    email = body.get("email", "")
+    password = body.get("password", "")
+
+    if not email:
+        result = {"success": False, "message": "email not found"}
+        return JsonResponse(result)
+
+    if not password:
+        result = {"success": False, "message": "password not found"}
+        return JsonResponse(result)
+
+    try:
+        User.objects.create(
+            email=email,
+            password=password
+        )
+    except IntegrityError:
+        result = {"success": False, "message": "user already exists"}
+        return JsonResponse(result)
+
+    request.session["auth_email"] = email
+    result = {"success": True}
+    return JsonResponse(result)

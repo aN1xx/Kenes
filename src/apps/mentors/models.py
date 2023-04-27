@@ -2,8 +2,9 @@ import uuid
 
 from django.db import models
 
-from apps.common import models as common_models
-from apps.mentors import GradeTypes
+from ..common import models as common_models
+from . import GradeTypes
+from ..users.models import User
 
 
 class Mentor(
@@ -12,6 +13,14 @@ class Mentor(
     common_models.TimestampedModel,
 ):
     id: uuid.UUID
+
+    user: 'User' = models.ForeignKey(
+        'users.User',
+        on_delete=models.SET_NULL,
+        related_name='mentors',
+        null=True,
+        blank=True
+    )
 
     about: str = models.CharField(
         max_length=100,
