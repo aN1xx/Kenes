@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {% load static %}
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="{% static 'css/global.css' %}" />
@@ -100,14 +101,14 @@
       var biarrowRightCircle = document.getElementById("biarrowRightCircle");
       if (biarrowRightCircle) {
         biarrowRightCircle.addEventListener("click", function (e) {
-          window.location.href = "./MentorsStep10.html";
+          window.location.href = "/mentor-10/";
         });
       }
       
       var biarrowRightCircleIcon = document.getElementById("biarrowRightCircleIcon");
       if (biarrowRightCircleIcon) {
         biarrowRightCircleIcon.addEventListener("click", function (e) {
-          window.location.href = "./MentorsStep8.html";
+          window.location.href = "/mentor-8/";
         });
       }
       </script>

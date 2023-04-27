@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {% load static %}
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="{% static 'css/global.css' %}" />
@@ -108,7 +109,7 @@
       var biarrowRightCircleIcon = document.getElementById("biarrowRightCircleIcon");
       if (biarrowRightCircleIcon) {
         biarrowRightCircleIcon.addEventListener("click", function (e) {
-          window.location.href = "./MenteesStep9.html";
+          window.location.href = "/mentee-9/";
         });
       }
       
@@ -117,7 +118,7 @@
       );
       if (biarrowRightCircleIcon1) {
         biarrowRightCircleIcon1.addEventListener("click", function (e) {
-          window.location.href = "./MenteesStep11.html";
+          window.location.href = "/mentee-11/";
         });
       }
       </script>

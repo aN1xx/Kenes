@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {% load static %}
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./MentorsStep141.css" />
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/MentorsStep141.css' %}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
@@ -17,7 +18,7 @@
   <body>
     <div class="mentors-step-14">
       <div class="top3">
-        <img class="image-43-icon3" alt="" src="./public/image-4321.svg" />
+        <img class="image-43-icon3" alt="" src="{% static 'images/image-4321.svg' %}" />
 
         <div class="content19">
           <div class="card7">
@@ -47,14 +48,14 @@
       <img
         class="mentors-step-14-item"
         alt=""
-        src="./public/rectangle-221@2x.png"
+        src="{% static 'images/rectangle-221@2x.png' %}"
       />
 
       <button class="video3">
         <img
           class="clarityplay-solid-icon3"
           alt=""
-          src="./public/clarityplaysolid11.svg"
+          src="{% static 'images/clarityplaysolid11.svg' %}"
         />
 
         <div class="learn-how-kenes3">Learn how Kenes works</div>
@@ -70,10 +71,10 @@
       <div class="transparent-frame2"></div>
       <div class="btns">
         <button class="biarrow-right-circle8" id="biarrowRightCircle">
-          <img class="vector-icon84" alt="" src="./public/vector1111.svg" />
+          <img class="vector-icon84" alt="" src="{% static 'images/vector1111.svg' %}" />
         </button>
         <button class="biarrow-right-circle9" id="biarrowRightCircle1">
-          <img class="vector-icon85" alt="" src="./public/vector211.svg" />
+          <img class="vector-icon85" alt="" src="{% static 'images/vector211.svg' %}" />
         </button>
       </div>
       <div class="application-form14">
@@ -159,7 +160,7 @@
               <div class="add-group">
                 <div class="paragraph-black21">Add</div>
                 <button class="atoms-icons-system-add11">
-                  <img class="mask-icon" alt="" src="./public/mask.svg" />
+                  <img class="mask-icon" alt="" src="{% static 'images/mask.svg' %}" />
 
                   <div class="card7">
                     <div class="atoms-colors-black"></div>
@@ -175,7 +176,7 @@
       </div>
       <div class="navbar-logo19">
         <div class="logo28">
-          <img class="union-icon28" alt="" src="./public/union22.svg" />
+          <img class="union-icon28" alt="" src="{% static 'images/union22.svg' %}" />
         </div>
       </div>
     </div>
@@ -184,14 +185,14 @@
       var biarrowRightCircle = document.getElementById("biarrowRightCircle");
       if (biarrowRightCircle) {
         biarrowRightCircle.addEventListener("click", function (e) {
-          window.location.href = "./ChooseARole.html";
+          window.location.href = "/choose-a-role/";
         });
       }
       
       var biarrowRightCircle1 = document.getElementById("biarrowRightCircle1");
       if (biarrowRightCircle1) {
         biarrowRightCircle1.addEventListener("click", function (e) {
-          window.location.href = "./MentorsStep13.html";
+          window.location.href = "/mentor-13/";
         });
       }
       </script>

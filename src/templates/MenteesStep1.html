@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {% load static %}
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="{% static 'css/global.css' %}" />
@@ -19,7 +20,7 @@
       <img
         class="mentees-step-1-child"
         alt=""
-        src="{% static 'css/rectangle-221@2x.png' %}"
+        src="{% static 'images/rectangle-221@2x.png' %}"
       />
 
       <div class="join-our-community1">
@@ -31,7 +32,7 @@
         </div>
       </div>
       <button class="biarrow-right-circle" id="biarrowRightCircle">
-        <img class="vector-icon9" alt="" src="{% static 'css/vector6.svg' %}" />
+        <img class="vector-icon9" alt="" src="{% static 'images/vector6.svg' %}" />
       </button>
       <img
         class="biarrow-right-circle-icon"
@@ -157,14 +158,14 @@
       var biarrowRightCircle = document.getElementById("biarrowRightCircle");
       if (biarrowRightCircle) {
         biarrowRightCircle.addEventListener("click", function (e) {
-          window.location.href = "./MenteesStep14.html";
+          window.location.href = "/mentee-14/";
         });
       }
       
       var biarrowRightCircleIcon = document.getElementById("biarrowRightCircleIcon");
       if (biarrowRightCircleIcon) {
         biarrowRightCircleIcon.addEventListener("click", function (e) {
-          window.location.href = "./MentorsStep13.html";
+          window.location.href = "/mentor-13/";
         });
       }
       </script>

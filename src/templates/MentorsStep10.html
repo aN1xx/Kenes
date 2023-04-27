@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {% load static %}
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./MentorsStep10.css" />
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/MentorsStep10.css' %}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
@@ -19,7 +20,7 @@
       <img
         class="mentors-step-5-child"
         alt=""
-        src="./public/rectangle-224@2x.png"
+        src="{% static 'images/rectangle-224@2x.png' %}"
       />
 
       <div class="quote18">
@@ -35,17 +36,17 @@
           <img
             class="richat-quote-line-icon1"
             alt=""
-            src="./public/richatquoteline.svg"
+            src="{% static 'images/richatquoteline.svg' %}"
           />
 
           <div class="paragraph24">Tony Robins</div>
         </div>
       </div>
       <button class="biarrow-right-circle4" id="biarrowRightCircle">
-        <img class="vector-icon25" alt="" src="./public/vector6.svg" />
+        <img class="vector-icon25" alt="" src="{% static 'images/vector6.svg' %}" />
       </button>
       <button class="biarrow-right-circle5" id="biarrowRightCircle1">
-        <img class="vector-icon26" alt="" src="./public/vector10.svg" />
+        <img class="vector-icon26" alt="" src="{% static 'images/vector10.svg' %}" />
       </button>
       <div class="application-form11">
         <div class="progress36">
@@ -86,7 +87,7 @@
                   <img
                     class="atoms-icons-system-add8"
                     alt=""
-                    src="./public/atoms--icons--system--add.svg"
+                    src="{% static 'images/atoms--icons--system--add.svg' %}"
                   />
                 </button>
               </div>
@@ -101,7 +102,7 @@
       </div>
       <div class="navbar-logo15">
         <div class="logo17">
-          <img class="union-icon17" alt="" src="./public/union12.svg" />
+          <img class="union-icon17" alt="" src="{% static 'images/union12.svg' %}" />
         </div>
       </div>
     </div>
@@ -110,14 +111,14 @@
       var biarrowRightCircle = document.getElementById("biarrowRightCircle");
       if (biarrowRightCircle) {
         biarrowRightCircle.addEventListener("click", function (e) {
-          window.location.href = "./MentorsStep11.html";
+          window.location.href = "/mentor-11/";
         });
       }
       
       var biarrowRightCircle1 = document.getElementById("biarrowRightCircle1");
       if (biarrowRightCircle1) {
         biarrowRightCircle1.addEventListener("click", function (e) {
-          window.location.href = "./MentorsStep9.html";
+          window.location.href = "/mentor-9/";
         });
       }
       </script>
