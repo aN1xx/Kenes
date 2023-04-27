@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from apps.mentors.models import Mentor
+from .models import Mentor, Booking
 
 
 @admin.register(Mentor)
@@ -21,3 +21,5 @@ class MentorAdmin(admin.ModelAdmin):
     @admin.display(description='ФИО')
     def full_name(self, obj):
         return obj.full_name
+
+admin.site.register(Booking)
