@@ -5,7 +5,8 @@
 Склонируйте репозиторий на локальный компьютер:
 git clone https://github.com/username/repo.git
 
-Для запуска данного проекта необходимо иметь на компьютере установленный Python 3
+Для запуска данного проекта необходимо иметь на компьютере установленный Python 3:
+
 python -m venv venv
 
 .\venv\Scripts\activate on Windows
