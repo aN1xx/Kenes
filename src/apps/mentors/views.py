@@ -31,7 +31,7 @@ def sign_in(request):
             login(request, user)
             return redirect('/dashboard/')
         else:
-            error_message = "Invalid email or password"
+            error_message = "Invalid username or password"
             return render(request, 'SignIn.html', {'error_message': error_message})
 
     else:
@@ -46,7 +46,7 @@ def sign_up(request):
             user = User.objects.create_user(username=username, password=password)
 
         except Exception:
-            error_message = "Invalid email or password"
+            error_message = "This username is taken"
             return render(request, 'SignUp.html', {'error_message': error_message})
 
         if user is not None:
@@ -55,7 +55,7 @@ def sign_up(request):
             return redirect('/choose-a-role/')
         else:
             # Show an error message
-            error_message = "Invalid email or password"
+            error_message = "This username is taken"
             return render(request, 'SignUp.html', {'error_message': error_message})
     else:
         return render(request, 'SignUp.html')
