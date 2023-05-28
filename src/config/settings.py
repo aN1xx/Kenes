@@ -26,11 +26,7 @@ SECRET_KEY = 'django-insecure-eiba#$a5%q_s25c^pf&x5693l7!on2@-j#%0!=j$$o4x!snoiq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '0.0.0.0']
-
-if DEBUG:
-    ALLOWED_HOSTS += ['*']
-
+ALLOWED_HOSTS = ['sanjikt3.beget.tech', 'www.sanjikt3.beget.tech']
 
 # Application definition
 
