@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/myprofile.css' %}">
+    <script src="https://kit.fontawesome.com/54900df22d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Kenes</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="nav">
+            <div>
+                <a href="./dashboard.html"><img src="{% static 'images/logo.png' %}" alt="logo"></a>
+            </div>
+            <div>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input placeholder="SEARCH">
+                    <i class="fas fa-microphone"></i>
+                </div>
+            </div>
+            <div class="nav-controller">
+                <a href=""><i class="fas fa-bell"></i></a>
+                <a href="./myprofile.html"><i class="fas fa-user"></i></a>
+                <select>
+                    <option>KAZAKH</option>
+                    <option>RUSSIA</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="">
+
+    <div class="cover-background">
+        <div class="cover-text">
+            <span>
+                <h2>Assel Sadykova</h2>
+                <p>Almaty, Kazakhstan</p>
+            </span>
+            <span>
+                <a href="#" class="cover-button">edit cover photo</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="page">
+        <aside>
+            <div class="profile-info">
+                <img src="{% static 'images/myLoginProfileImg.png' %}" alt="profile-img">
+                <div>
+                    <p><b>About</b> me:</p>
+                    <p>Female, 28 years</p>
+                    <p><i class="fas fa-briefcase"></i>Business Analyst</p>
+                    <p><i class="fas fa-bolt"></i>Junior Level</p>
+                    <p><i class="fas fa-arrow-up"></i>1 years experience</p>
+                </div>
+            </div>
+
+            <div class="profile-buttons">
+                <a href="#"><i class="fa fa-coffee" aria-hidden="true"></i> | my donations</a>
+                <a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> | edit profile</a>
+            </div>
+
+            <div class="profile-text">
+                <h3>Tanysaiyq!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            </div>
+
+            <div class="profile-text">
+                <h3>My goals</h3>
+                <div class="goals">
+                    <a href="#">GOAL 1</a>
+                    <a href="#">GOAL 2</a>
+                    <a href="#">GOAL 3</a>
+                    <a href="#">GOAL 4</a>
+                    <a href="#">GOAL 5</a>
+                    <a href="#">GOAL 6</a>
+                </div>
+            </div>
+
+            <div class="profile-text">
+                <h3>My interests</h3>
+                <div class="goals">
+                    <a href="#">INTEREST 1</a>
+                    <a href="#">INTEREST 2</a>
+                    <a href="#">INTEREST 3</a>
+                    <a href="#">INTEREST 4</a>
+                    <a href="#">INTEREST 5</a>
+                    <a href="#">INTEREST 6</a>
+                </div>
+            </div>
+
+            <div class="profile-text">
+                <h3>Experience</h3>
+                <div class="experiences">
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    <span>
+                        <h4>Junior Business Analyst</h4>
+                        <p>Kaspi.kz  <i class="fa fa-map-marker" aria-hidden="true" style="font-size: 14px;"> </i>  Almaty</p>
+                        <p>2019 - 2022</p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="profile-text">
+                <h3>Education</h3>
+                <div class="experiences">
+                    <i class="fa fa-university" aria-hidden="true"></i>
+                    <span>
+                        <h4>International IT University</h4>
+                        <p>Information Systems (Bachelors)</p>
+                        <p>2019 - 2022</p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="profile-text">
+                <h3>Languages</h3>
+                <div class="experiences">
+                    <i class="fa fa-language" aria-hidden="true"></i>
+                    <span>
+                        <h4>English</h4>
+                        <p>Fluent</p>
+                    </span>
+                </div>
+
+                <div class="experiences">
+                    <i class="fa fa-language" aria-hidden="true"></i>
+                    <span>
+                        <h4>Kazakh</h4>
+                        <p>Native</p>
+                    </span>
+                </div>
+
+                <div class="experiences">
+                    <i class="fa fa-language" aria-hidden="true"></i>
+                    <span>
+                        <h4>Russia</h4>
+                        <p>Native</p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="profile-text">
+                <h3>My connections</h3>
+                <div class="friends">
+                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <i style="font-size: 24px;">+150</i>
+                </div>
+                <a href="#" style="color: #3A4980; font-size: 20px;">View all</a>
+            </div>
+        </aside>
+
+        <div class="content">
+            <div class="content">
+                <section id="schedule">
+                    <div class="schedule-inner">
+                        <div class="Schedule-controller">
+                            <h2>My Schedule</h2>
+                            <div>
+                                <p>GMT+06 (Astana)</p>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar">
+                            <div class="calendar-div">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p>SUN</p>
+                                            <h3>21</h3>
+                                        </td>
+                                        <td>
+                                            <p>MON</p>
+                                            <h3>22</h3>
+                                        </td>
+                                        <td>
+                                            <p>TUE</p>
+                                            <h3>23</h3>
+                                        </td>
+                                        <td>
+                                            <p>WED</p>
+                                            <h3>24</h3>
+                                        </td>
+                                        <td>
+                                            <p>THU</p>
+                                            <h3>25</h3>
+                                        </td>
+                                        <td>
+                                            <p>FRI</p>
+                                            <h3>26</h3>
+                                        </td>
+                                        <td>
+                                            <p>SAT</p>
+                                            <h3>27</h3>
+                                        </td>
+                                        <td>
+                                            <p>SUN</p>
+                                            <h3>28</h3>
+                                        </td>
+                                        <td>
+                                            <p>MON</p>
+                                            <h3>29</h3>
+                                        </td>
+                                        <td>
+                                            <p>TUE</p>
+                                            <h3>30</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>9 AM</p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>12 AM</p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>3 PM</p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>5 PM</p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>7 PM</p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="community">
+                    <div class="post-writer">
+                        <h3>New post</h3>
+                        <textarea placeholder="| Type something here to write a post."></textarea>
+                        <div class="post-controller">
+                            <span>
+                                <a href="#"><i class="fas fa-image"></i></a>
+                                <a href="#"><i class="fas fa-paperclip"></i></a>
+                                <a href="#"><i class="far fa-smile"></i></a>
+                            </span>
+                            <a href="#" class="button-create">CREATE A POST</a>
+                        </div>
+                    </div>
+
+                    <h2>My posts<i></i></h2>
+                    <div class="posts">
+                        <div class="post">
+                            <div class="post-profile">
+                                <img alt="post-profile-img" src="{% static 'images/avatar-dashboard.jpg' %}">
+                                <span>
+                                    <a href="#">Assel Sadykova</a>
+                                    <p>17 Oct at 19:54</p>
+                                </span>
+                            </div>
+                            <p>Had a productive day working from home today! I spent the morning diving into some market research to help inform some upcoming projects. In the afternoon, I had an online meeting with my mentor, Arman. It was great to touch base with him and discuss some of the challenges I'm facing at work. Arman's insights and guidance are always invaluable, and I'm grateful for his support as I continue to grow in my role. I left the meeting feeling more confident and motivated to tackle any obstacles that come my way. It's amazing how much of a difference a mentor can make! Looking forward to putting what I've learned into practice and continuing to learn from Arman's expertise.</p>
+                            <div class="post-images">
+                                <img alt="post-big-img" src="{% static 'images/myprof-post-1-1.jpg' %}" class="post-big-img">
+                                <div class="small-images">
+                                    <img alt="post-small-img-up" src="{% static 'images/myprof-post-1-2.jpg' %}" class="post-small-img">
+                                    <img alt="post-small-img-down" src="{% static 'images/myprof-post-1-3.jfif' %}" class="post-small-img">
+                                </div>
+                            </div>
+                            <div class="post-controller-other">
+                                <div>
+                                    <span>
+                                        <a href="#" style="color: #FF4040 !important;"><i class="fas fa-heart"></i></a>
+                                        <p>555</p>
+                                    </span>
+                                    <span>
+                                        <a href="#"><i class="fas fa-comments"></i></a>
+                                        <p>100</p>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span><a href="#"><i class="fas fa-share"></i>Share</a></span>
+                                    <a href="#"><i class="fas fa-bookmark"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-profile">
+                                <img alt="post-profile-img" src="{% static 'images/avatar-dashboard.jpg' %}">
+                                <span>
+                                    <a href="#">Assel Sadykova</a>
+                                    <p>16 Oct at 17:35</p>
+                                </span>
+                            </div>
+                            <p>I spent the morning diving into some project work: had an online meeting with some of my work colleagues to discuss some upcoming initiatives. It was great to collaborate and bounce ideas off of each other. Working from Starbucks gave me a nice change of scenery and helped me stay focused throughout the day. In addition to my work, I decided to start learning programming. I've always been fascinated by the field and I think it will help me in my role as a Business Analyst. I'm excited to see where this new journey takes me and how it will help me grow in my career.
+                                Overall, it was a productive day filled with work, learning, and collaboration. Looking forward to seeing what tomorrow brings!</p>
+                            <div class="post-images">
+                                <img alt="post-big-img" src="{% static 'images/myprof-post-2-1.jpg' %}" class="post-big-img">
+                                <div class="small-images">
+                                    <img alt="post-small-img-up" src="{% static 'images/myprof-post-2-2.jpg' %}" class="post-small-img">
+                                    <img alt="post-small-img-down" src="{% static 'images/myprof-post-2-3.jpg' %}" class="post-small-img">
+                                </div>
+                            </div>
+                            <div class="post-controller-other">
+                                <div>
+                                    <span>
+                                        <a href="#" style="color: #FF4040 !important;"><i class="fas fa-heart"></i></a>
+                                        <p>555</p>
+                                    </span>
+                                    <span>
+                                        <a href="#"><i class="fas fa-comments"></i></a>
+                                        <p>100</p>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span><a href="#"><i class="fas fa-share"></i>Share</a></span>
+                                    <a href="#"><i class="fas fa-bookmark"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loader">
+                        <img alt="load" src="{% static 'images/loader.svg' %}">
+                        <p>Load more...</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="container">
+        <div class="footer-div">
+            <div class="footer-4">
+                Our mission at Kenes is to provide a platform that enables individuals to achieve their personal and professional goals by connecting them with experienced mentors who can offer guidance and support.
+                <div class="socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-4">
+                <p>KENES</p>
+                <a href="#">How it works</a>
+                <a href="#">Features</a>
+                <a href="#">Pricing</a>
+                <a href="#">Support</a>
+            </div>
+            <hr>
+            <div class="footer-4">
+                <p>ABOUT KENES</p>
+                <a href="#">Our team</a>
+                <a href="#">Carees</a>
+            </div>
+            <hr>
+            <div class="footer-4">
+                <p>Contact</p>
+                <a href="#">info@kenes.kz</a>
+                <a href="#">882-587-3025</a>
+                <a href="#">Manas Street 34/1</a>
+                <a href="#">Almaty, Kazakhstan</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <a href="#">Terms and conditions</a>
+            <p>©2022 - Kenes  |   All right reserved</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../static/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

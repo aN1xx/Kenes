@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Kenes</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav">
+                <div>
+                    <a href="./dashboard.html"><img src="{% static 'images/logo.png' %}" alt="logo"></a>
+                </div>
+                <div>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input placeholder="SEARCH">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                </div>
+                <div class="nav-controller">
+                    <a href=""><i class="fas fa-bell"></i></a>
+                    <a href="./myprofile.html"><i class="fas fa-user"></i></a>
+                    <select>
+                        <option>KAZAKH</option>
+                        <option>RUSSIA</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="">
+        <div class="page">
+            <aside>
+                <div>
+                    <div class="profile">
+                        <img alt="profilte-img" src="{% static 'images/avatar-dashboard.jpg' %}">
+                        <span>
+                            <h2>Assel Sadykova</h2>
+                            <a href="./myprofile.html">View Profile</a>
+                        </span>
+                    </div>
+                    <hr>
+                    <div class="aside-nav">
+                        <div>
+                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                            <a>Search mentors</a>
+                        </div>
+                        <div>
+                            <i class="fas fa-users"></i>
+                            <a>My connections</a>
+                        </div>
+                        <div>
+                            <i class="fas fa-chart-bar"></i>
+                            <a>Reports & Statitics</a>
+                        </div>
+                        <div>
+                            <i class="fas fa-calendar-alt"></i>
+                            <a>Events</a>
+                        </div>
+                        <div>
+                            <i class="fas fa-bookmark"></i>
+                            <a>Saved posts</a>
+                        </div>
+                        <div>
+                            <i class="fas fa-ellipsis-h"></i>
+                            <a>More</a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="content">
+                <section id="hero">
+                        <div class="hero-text">
+                            <h2>Today’s Matches</h2>
+                            <p>This section is designed to help users stay up-to-date with their connections and manage their schedules effectively. Users can view all available matches and accept or reject friend and appointment requests with ease.</p>
+                            <div class="slider">
+                                <i class="fa fa-chevron-left"></i>
+                                <div class="slider-div">
+                                    <div>
+                                        <img alt="slider-img" src="{% static 'images/slider-avatar.png' %}">
+                                        <img alt="slider-img" src="{% static 'images/connect.png' %}">
+                                    </div>
+                                    <p>I am excited to connect with you through Kenes. As a mentor, I bring years of experience and expertise in the field of business analysis. Let's work together to unlock your full potential!</p>
+                                    <h3>Sean Farmer</h3>
+                                    <p>I can help with <b>Business Analysis</b></p>
+                                </div>
+                                <i class="fa fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    <div class="right-sliders">
+                        <div class="slider-right">
+                            <i class="fa fa-chevron-left"></i>
+                            <div class="slider-right-div">
+                                <div class="slider-right-profile">
+                                    <img alt="slider-img" src="{% static 'images/dash-ava-1.png' %}">
+                                    <h3>Isabella Rodriguez</h3>
+                                    <a href="{% url 'api:other-profile' %}">View Profile</a>
+                                </div>
+                                <div class="slider-right-info">
+                                    <h3>Friends Requests <i class="fa fa-user-plus" aria-hidden="true"></i></h3>
+                                    <p>I came across your profile and I thought it would be great to connect! I'm always looking to meet...</p>
+                                    <span><a href="#" class="accept"><i class="fas fa-check"></i>accept</a><a href="#" class="reject"><i class="fas fa-times"></i>reject</a></span>
+                                </div>
+                            </div>
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+
+                        <div class="slider-right">
+                            <i class="fa fa-chevron-left"></i>
+                            <div class="slider-right-div">
+                                <div class="slider-right-profile">
+                                    <img alt="slider-img" src="{% static 'images/dash-ava-2.png' %}">
+                                    <h3>Lucas Martin</h3>
+                                    <a href="{% url 'api:other-profile' %}">View Profile</a>
+                                </div>
+                                <div class="slider-right-info">
+                                    <h3>Friends Requests <i class="fa fa-user-plus" aria-hidden="true"></i></h3>
+                                    <p>I'm excited to work with you on this mentoring session. My goal is to share...</p>
+                                    <span><a href="#" class="accept"><i class="fas fa-check"></i>accept</a><a href="#" class="reject"><i class="fas fa-times"></i>reject</a></span>
+                                </div>
+                            </div>
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="community">
+                    <h2>Community<i></i></h2>
+                    <p>Help Requests</p>
+                    <div class="slider-comminitys">
+                        <i class="fa fa-chevron-left"></i>
+                        <div class="slider-comminity">
+                            <div class="slider-comminity-div">
+                                <div class="slider-right-profile">
+                                    <img alt="slider-img" src="{% static 'images/dash-ava-4.png' %}">
+                                    <h3>Alexander Davis</h3>
+                                    <a href="{% url 'api:other-profile' %}">View Profile</a>
+                                </div>
+                                <div class="slider-comminity-info">
+                                    <h3>I need help with:</h3>
+                                    <p>I hope this message finds you well. I'm reaching out because I'm in need of some guidance with Business Analysis.</p>
+                                    <span><a href="#" class="accept"><i class="fas fa-check"></i>answer request</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-comminity">
+                            <div class="slider-comminity-div">
+                                <div class="slider-right-profile">
+                                    <img alt="slider-img" src="{% static 'images/dash-ava-3.png' %}">
+                                    <h3>Aigerim Nursultanova</h3>
+                                    <a href="{% url 'api:other-profile' %}">View Profile</a>
+                                </div>
+                                <div class="slider-comminity-info">
+                                    <h3>I need help with:</h3>
+                                    <p>I hope this message finds you well. I'm reaching out because I'm in need of some guidance with Business Analysis.</p>
+                                    <span><a href="#" class="accept"><i class="fas fa-check"></i>answer request</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+
+                    <div class="post-writer">
+                        <h3>Posts</h3>
+                        <textarea placeholder="| Type something here to write a post."></textarea>
+                        <div class="post-controller">
+                            <span>
+                                <a href="#"><i class="fas fa-image"></i></a>
+                                <a href="#"><i class="fas fa-paperclip"></i></a>
+                                <a href="#"><i class="far fa-smile"></i></a>
+                            </span>
+                            <a href="#" class="button-create">CREATE A POST</a>
+                        </div>
+                    </div>
+
+                    <div class="posts">
+                        <div class="post">
+                            <div class="post-profile">
+                                <img alt="post-profile-img" src="{% static 'images/dash-post-avatar-1.png' %}">
+                                <span>
+                                    <a href="{% url 'api:other-profile' %}">Arman Smagulov</a>
+                                    <p>15 Oct at 15:15</p>
+                                </span>
+                            </div>
+                            <p>Had an amazing mentoring session today with one of my mentees, sharing insights on Business Analysis. It was a great opportunity for me to help them develop their skills and apply them to their work. I'm always passionate about mentoring and sharing my knowledge and experience with others. It's an incredible feeling to see my mentee leave the session feeling inspired and motivated to keep growing in their career. I'm grateful for the chance to be a mentor and help others in their journey of learning and development. Here's to more successful mentoring sessions in the future!</p>
+                            <div class="post-images">
+                                <img alt="post-big-img" src="{% static 'images/Dashboard-post-1-1.png' %}" class="post-big-img">
+                                <div class="small-images">
+                                    <img alt="post-small-img-up" src="{% static 'images/Dashboard-post-1-2.png' %}" class="post-small-img">
+                                    <img alt="post-small-img-down" src="{% static 'images/Dashboard-post-1-3.png' %}" class="post-small-img">
+                                </div>
+                            </div>
+                            <div class="post-controller-other">
+                                <div>
+                                    <span>
+                                        <a href="#" style="color: #FF4040 !important;"><i class="fas fa-heart"></i></a>
+                                        <p>555</p>
+                                    </span>
+                                    <span>
+                                        <a href="#"><i class="fas fa-comments"></i></a>
+                                        <p>100</p>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span><a href="#"><i class="fas fa-share"></i>Share</a></span>
+                                    <a href="#"><i class="fas fa-bookmark"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-profile">
+                                <img alt="post-profile-img" src="{% static 'images/dash-post-avatar-2.png' %}">
+                                <span>
+                                    <a href="{% url 'api:other-profile' %}">Alua Dusenkyzy</a>
+                                    <p>14 Oct at 12:01</p>
+                                </span>
+                            </div>
+                            <p>What a productive day! I spent the morning attending a conference on the latest trends in Project Management, where I learned some valuable insights that I can't wait to apply to my work. After the conference, I had an online meeting with my mentees over lunch. It was a great opportunity to catch up with them, provide guidance on their projects, and offer advice on how to handle any challenges they might be facing. Seeing their progress and growth is a constant source of inspiration for me as a mentor. I'm grateful for the chance to share my knowledge and experience with others, and I look forward to continuing to support them on their journey. Here's to more productive days like this one!</p>
+                            <div class="post-images">
+                                <img alt="post-big-img" src="{% static 'images/Dashboard-post-2-1.png' %}" class="post-big-img">
+                                <div class="small-images">
+                                    <img alt="post-small-img-up" src="{% static 'images/Dashboard-post-2-2.png' %}" class="post-small-img">
+                                    <img alt="post-small-img-down" src="{% static 'images/Dashboard-post-2-3.png' %}" class="post-small-img">
+                                </div>
+                            </div>
+                            <div class="post-controller-other">
+                                <div>
+                                    <span>
+                                        <a href="#" style="color: #FF4040 !important;"><i class="fas fa-heart"></i></a>
+                                        <p>555</p>
+                                    </span>
+                                    <span>
+                                        <a href="#"><i class="fas fa-comments"></i></a>
+                                        <p>100</p>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span><a href="#"><i class="fas fa-share"></i>Share</a></span>
+                                    <a href="#"><i class="fas fa-bookmark"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loader">
+                        <img alt="load" src="{% static 'images/loader.svg' %}">
+                        <p>Load more...</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-div">
+                <div class="footer-4">
+                    Our mission at Kenes is to provide a platform that enables individuals to achieve their personal and professional goals by connecting them with experienced mentors who can offer guidance and support.
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer-4">
+                    <p>KENES</p>
+                    <a href="#">How it works</a>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Support</a>
+                </div>
+                <hr>
+                <div class="footer-4">
+                    <p>ABOUT KENES</p>
+                    <a href="#">Our team</a>
+                    <a href="#">Carees</a>
+                </div>
+                <hr>
+                <div class="footer-4">
+                    <p>Contact</p>
+                    <a href="#">info@kenes.kz</a>
+                    <a href="#">882-587-3025</a>
+                    <a href="#">Manas Street 34/1</a>
+                    <a href="#">Almaty, Kazakhstan</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <a href="#">Terms and conditions</a>
+                <p>©2022 - Kenes  |   All right reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

@@ -299,7 +299,7 @@
   flex-shrink: 0;
   overflow: hidden;
   flex-direction: column;
-  background-image: url(./public/welcome-and-partners@3x.png);
+  background-image: url(../images/welcome-and-partners@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -595,7 +595,7 @@
   flex-direction: column;
   padding: var(--padding-81xl) 0;
   box-sizing: border-box;
-  background-image: url(./public/categories@3x.png);
+  background-image: url(../images/categories@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -830,7 +830,7 @@
   box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
-  background-image: url(./public/join-our-community@3x.png);
+  background-image: url(../images/join-our-community@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;

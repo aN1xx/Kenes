@@ -1,0 +1,438 @@
+.cover-background {
+    background-image: url(../images/otherUserCover.jpg);
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.cover-text {
+    color: white;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    align-items: end;
+    margin-bottom: 50px;
+    padding-right: 5%;
+}
+
+.cover-text h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.cover-button {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    border-radius: 30px;
+}
+
+aside {
+    position: absolute;
+    top: 200px;
+    width: 25%;
+}
+
+.page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.profile-info {
+    width: 90%;
+    background: #F6F8F9;
+}
+
+.profile-info img{
+    width: 100%;
+}
+
+.profile-info div {
+    width: 100%;
+    padding: 20px 0px 20px 70px;
+    color: #05195EC9;
+}
+
+.profile-info div i {
+    margin: 0px 10px 0px 0px;
+}
+
+.profile-info div p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.content {
+    margin-left: 15%;
+    width: 85%;
+    margin-bottom: 50px;
+}
+
+.profile-buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.profile-buttons a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    width: 90%;
+    padding: 20px 0px;
+    background: #3A4980;
+    border-radius: 5px;
+}
+
+.profile-text {
+    color: #3A4980;
+    margin: 30px 0px;
+    width: 90%;
+}
+
+.profile-text h3 {
+    color: #3A4980;
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.profile-text p {
+    color: #3A4980;
+}
+
+.goals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.goals a {
+    text-decoration: none;
+    color: white;
+    width: 45%;
+    background-color: #3A4980;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 5px;
+}
+
+.experiences {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid #3A4980;
+    padding: 20px 0px 20px 30px;
+    width: 90%;
+}
+
+.experiences i {
+    font-size: 32px;
+}
+
+.experiences p {
+    margin: 10px;
+}
+
+.experiences h4 {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.experiences span {
+    margin-left: 20px;
+}
+
+.profile-text div {
+    margin-bottom: 20px;
+}
+
+.friends {
+    font-size: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    align-items: center;
+}
+
+.friends a {
+    color: #3A4980;
+}
+
+#community {
+    margin-top: 50px;
+    padding-right: 5%;
+    background-image: url(../images/community-bg.jpg);
+    background-size: cover;
+    padding-left: 20px;
+    padding-top: 1px;
+    border-radius: 25px;
+}
+
+#community h2 {
+    margin-top: 50px;
+    color: #05195E;
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.post-writer {
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 20px;
+    color: #05195E;
+    padding: 30px;
+}
+
+.post-writer h3 {
+    background-color: white;
+    border-radius: 20px;
+    color: #05195E;
+    font-size: 24px;
+}
+
+.post-writer textarea {
+    margin-top: 10px;
+    border: none;
+    height: 200px;
+    width: 100%;
+}
+
+.post-writer textarea::placeholder {
+    position: relative;
+}
+
+.post-controller {
+    color: #05195E;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.post-controller a {
+    text-decoration: none;
+    color: #05195E;
+}
+
+.post-controller i {
+    font-size: 28px;
+    margin-right: 15px;
+}
+
+.button-create {
+    text-decoration: none;
+    color: white !important;
+    background-color: #05195E;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.post {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.post-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.post-profile img {
+    width: 10%;
+}
+
+.post-profile span {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.post-profile a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #05195E;
+}
+
+.post-profile p {
+    margin: 0px !important;
+    text-align: left;
+    font-size: 16px !important;
+    color:#505D68;
+}
+
+.post p {
+    margin: 30px 0px;
+    color: #05195E;
+    font-size: 16px !important;
+}
+
+.post-images {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.post-big-img {
+    width: 80%;
+    height: 410px;
+    background-color: #505D68;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.small-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20%;
+}
+
+.post-small-img {
+    width: 100%;
+    height: 200px;
+    background-color: #505D68;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.post-controller-other {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.post-controller-other p {
+    color: #05195E;
+    margin: 0px;
+    padding: 0px !important;
+}
+
+.post-controller-other div {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+.post-controller-other div a {
+    display: flex;
+    align-items: center;
+}
+
+.post-controller-other i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.post-controller-other a {
+    font-size: 14px;
+    color: #05195E;
+    text-decoration: none;
+}
+
+.loader {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader p {
+    font-size: 16px !important;
+    margin-top: 10px;
+}
+
+
+#schedule {
+
+}
+
+.schedule-inner {
+    width: 90%;
+    background: url(../images/dashboard-bg.jpg);
+    background-size: cover;
+    padding: 50px;
+    border-radius: 25px;
+    color: #05195E;
+}
+
+.Schedule-controller {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.calendar {
+    width: 100%;
+    overflow: scroll;
+    overflow-y: hidden;
+    padding-bottom: 30px;
+}
+
+.calendar::-webkit-scrollbar {
+    padding: 200px;
+    height: 10px; /* высота линии */
+}
+
+.calendar::-webkit-scrollbar-track {
+    background: rgba(66, 75, 90, 0.26);
+    border-radius: 10px;
+}
+
+.calendar::-webkit-scrollbar-thumb {
+    width: 30px !important;
+    height: 40px !important;
+    background: #FFFFFF;
+    border-radius: 10px; /* форма овала */
+
+}
+
+.calendar-div {
+    width: 200%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr td:first-child {
+    background-color: transparent !important;
+    width: 65px;
+    border: none;
+}
+
+tr td {
+    padding: 0px 20px;
+    width: 130px;
+    height: 65px;
+    background-color: white;
+    border: solid 2px #bebebe;
+    margin: 0px;
+}
+
+tr td:hover {
+    background: #EFF6FF;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
+  {% load static %}
   <head>
-    {% load static %}
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="{% static 'css/global.css' %}" />
@@ -416,11 +416,11 @@
               enim ad minim veniamquis.
             </div>
             <div class="social-media1">
-              <img class="frame-icon" alt="" src="./public/frame-939.svg" />
+              <img class="frame-icon" alt="" src="{% static 'images/frame-939.svg' %}" />
 
-              <img class="frame-icon" alt="" src="./public/frame-940.svg" />
+              <img class="frame-icon" alt="" src="{% static 'images/frame-940.svg' %}" />
 
-              <img class="frame-icon" alt="" src="./public/frame-941.svg" />
+              <img class="frame-icon" alt="" src="{% static 'images/frame-941.svg' %}" />
             </div>
           </div>
           <div class="footer-group1">
@@ -470,7 +470,7 @@
       var lOGINBTN = document.getElementById("lOGINBTN");
       if (lOGINBTN) {
         lOGINBTN.addEventListener("click", function (e) {
-          window.open("/sign-in/");
+          window.open("/accounts/login/");
         });
       }
       
@@ -484,7 +484,7 @@
       var btn = document.getElementById("btn");
       if (btn) {
         btn.addEventListener("click", function (e) {
-          // Please sync "Landing Page" to the project
+          window.open("/");
         });
       }
       

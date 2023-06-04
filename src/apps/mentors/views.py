@@ -2,6 +2,7 @@ import json
 from sqlite3 import IntegrityError
 
 from django.contrib.auth import authenticate, login, get_user_model
+from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from drf_spectacular.utils import extend_schema
@@ -17,6 +18,7 @@ from ..users.models import User
 
 
 User = get_user_model()
+
 
 def index(request):
     return render(request, 'index.html')
@@ -129,5 +131,24 @@ def mentor_141(request):
     return render(request, 'MentorsStep141.html')
 
 
+@login_required
 def dashboard(request):
-    return render(request, 'Dashboard.html')
+    return render(request, 'dashboard.html')
+
+
+def landing_page_after(request):
+    return render(request, 'LandingPageAfter.html')
+
+
+@login_required
+def my_profile(request):
+    return render(request, 'myprofile.html')
+
+
+@login_required
+def other_profile(request):
+    return render(request, 'otherprofile.html')
+
+
+def search(request):
+    return render(request, 'SearchResults.html')
