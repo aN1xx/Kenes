@@ -5,13 +5,14 @@ from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
+from django.utils import timezone
 from drf_spectacular.utils import extend_schema
 from django.views.decorators.csrf import csrf_exempt
 
 from rest_framework import generics, mixins
 from django_filters import rest_framework as filters
 
-from .models import Mentor
+from .models import Mentor, Booking
 from .serializers import MentorSerializer
 from .filters import MentorFilter
 from ..users.models import User
@@ -149,7 +150,12 @@ def mentor_141(request):
 
 @login_required
 def dashboard(request):
-    return render(request, 'dashboard.html')
+    mentor = Mentor.objects.get(user=request.user)
+    data = {
+        'full_name': mentor.full_name,
+        'image': str(mentor.profile_picture).replace('src/', ''),
+    }
+    return render(request, 'dashboard.html', data)
 
 
 def landing_page_after(request):
@@ -159,15 +165,35 @@ def landing_page_after(request):
 @login_required
 def my_profile(request):
     mentor = Mentor.objects.get(user=request.user)
+    table_data = [
+        ['9 AM', '', '', '', '', '', '', '', '', '', ''],
+        ['12 AM', '', '', '', '', '', '', '', '', '', ''],
+        ['3 PM', '', '', '', '', '', '', '', '', '', ''],
+        ['5 PM', '', '', '', '', '', '', '', '', '', ''],
+        ['7 PM', '', '', '', '', '', '', '', '', '', ''],
+    ]
+    booked = []
     data = {
         'full_name': mentor.full_name,
         'about': mentor.about,
         'occupation': mentor.occupation,
         'grade': mentor.grade,
         'experience': mentor.experience,
-        'image': mentor.profile_picture,
+        'image': str(mentor.profile_picture).replace('src/', ''),
+        'table_data': table_data,
     }
-    print(data)
+    if request.method == 'POST':
+        button_value = request.POST.get('button_value')
+        if 'AM' in button_value:
+            slot_time = button_value.replace(' AM', ':00')
+        else:
+            int_time = int(button_value[0]) + 12
+            slot_time = str(int_time) + ':00'
+
+        _, booking = Booking.objects.get_or_create(user=request.user, slot_date=timezone.now().date(), slot_time=slot_time)
+        print(f"SUCCESSFULLY BOOKED: {booking}")
+        return render(request, 'myprofile.html', data)
+
     return render(request, 'myprofile.html', data)
 
 
@@ -177,4 +203,9 @@ def other_profile(request):
 
 
 def search(request):
-    return render(request, 'SearchResults.html')
+    mentors = Mentor.objects.all()
+    for i in mentors:
+        i.profile_picture = str(i.profile_picture).replace('src/', '')
+
+    data = {'mentors': mentors}
+    return render(request, 'SearchResults.html', data)

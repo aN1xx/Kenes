@@ -22,7 +22,7 @@ class Mentor(
         blank=False
     )
 
-    profile_picture = models.ImageField(upload_to='images/')
+    profile_picture = models.ImageField(upload_to='src/static/images/')
 
     gender: str = models.CharField(
         max_length=20,

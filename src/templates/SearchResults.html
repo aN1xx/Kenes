@@ -92,16 +92,17 @@
       </div>
       <div class="profie-group-parent">
         <div class="profie-group">
+          {% for mentor in mentors %}
           <a class="profile1" target="_blank">
-            <div class="profile-description">
+            <div class="profile-description" style="background-image: url(../{{ mentor.profile_picture }})">
               <div class="container">
                 <div class="name9">
-                  <b class="arman-smagulov">Arman Smagulov</b>
+                  <b class="arman-smagulov">{{ mentor.full_name }}</b>
                 </div>
                 <div class="occupation">
                   <img class="vector-icon2" alt="" src="{% static 'images/vector2.svg' %}" />
 
-                  <div class="experience">Business Analyst</div>
+                  <div class="experience">{{ mentor.occupation }}</div>
                 </div>
                 <div class="level1">
                   <img
@@ -110,199 +111,12 @@
                     src="{% static 'images/bilightningchargefill.svg' %}"
                   />
 
-                  <div class="experience">Senior Level</div>
+                  <div class="experience">{{mentor.grade}}</div>
                 </div>
               </div>
             </div>
           </a>
-          <a class="profile1" target="_blank">
-            <div class="profile-description1">
-              <div class="container">
-                <div class="name9">
-                  <b class="arman-smagulov">Dinara Kudaibergenova</b>
-                </div>
-                <div class="occupation">
-                  <img class="vector-icon2" alt="" src="{% static 'images/vector3.svg' %}" />
-
-                  <div class="experience">Product Designer</div>
-                </div>
-                <div class="level1">
-                  <img
-                    class="bilightning-charge-fill-icon"
-                    alt=""
-                    src="{% static 'images/bilightningchargefill1.svg' %}"
-                  />
-
-                  <div class="experience">Senior Level</div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="profile1" target="_blank">
-            <div class="profile-description2">
-              <div class="container">
-                <div class="name9">
-                  <b class="arman-smagulov">Kanat Tursynbekov </b>
-                </div>
-                <div class="occupation">
-                  <img class="vector-icon2" alt="" src="{% static 'images/vector4.svg' %}" />
-
-                  <div class="experience">Software Engineer</div>
-                </div>
-                <div class="level1">
-                  <img
-                    class="bilightning-charge-fill-icon"
-                    alt=""
-                    src="{% static 'images/bilightningchargefill2.svg' %}"
-                  />
-
-                  <div class="experience">Senior Level</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="profie-group">
-          <a class="profile1" target="_blank">
-            <div class="profile-description3">
-              <div class="container">
-                <div class="name9">
-                  <b class="arman-smagulov">Zhanna Sarsembayeva</b>
-                </div>
-                <div class="occupation">
-                  <img class="vector-icon2" alt="" src="{% static 'images/vector2.svg' %}" />
-
-                  <div class="experience">Business Coach</div>
-                </div>
-                <div class="level1">
-                  <img
-                    class="bilightning-charge-fill-icon"
-                    alt=""
-                    src="{% static 'images/bilightningchargefill.svg' %}"
-                  />
-
-                  <div class="experience">Senior Level</div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="profile1" target="_blank">
-            <div class="profile-description4">
-              <div class="container">
-                <div class="name9">
-                  <b class="arman-smagulov">Andrey Fedorov</b>
-                </div>
-                <div class="occupation">
-                  <img class="vector-icon2" alt="" src="{% static 'images/vector3.svg' %}" />
-
-                  <div class="experience">IT Project Manager</div>
-                </div>
-                <div class="level1">
-                  <img
-                    class="bilightning-charge-fill-icon"
-                    alt=""
-                    src="{% static 'images/bilightningchargefill1.svg' %}"
-                  />
-
-                  <div class="experience">Senior Level</div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="profile1" target="_blank">
-            <div class="profile-description5">
-              <div class="container">
-                <div class="name9">
-                  <b class="arman-smagulov">Alua Dusenkyzy</b>
-                </div>
-                <div class="occupation">
-                  <img class="vector-icon2" alt="" src="{% static 'images/vector4.svg' %}" />
-
-                  <div class="experience">AI/ML Engineer</div>
-                </div>
-                <div class="level1">
-                  <img
-                    class="bilightning-charge-fill-icon"
-                    alt=""
-                    src="{% static 'images/bilightningchargefill2.svg' %}"
-                  />
-
-                  <div class="experience">Senior Level</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="profie-group">
-          <a class="profile1" target="_blank">
-            <div class="profile-description6">
-              <div class="container">
-                <div class="name9">
-                  <b class="arman-smagulov">Almas Shalkarbayev</b>
-                </div>
-                <div class="occupation">
-                  <img class="vector-icon2" alt="" src="{% static 'images/vector2.svg' %}" />
-
-                  <div class="experience">DevOps Engineer</div>
-                </div>
-                <div class="level1">
-                  <img
-                    class="bilightning-charge-fill-icon"
-                    alt=""
-                    src="{% static 'images/bilightningchargefill.svg' %}"
-                  />
-
-                  <div class="experience">Senior Level</div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="profile1" target="_blank">
-            <div class="profile-description7">
-              <div class="container">
-                <div class="name9">
-                  <b class="arman-smagulov">Amina Nurpeisova</b>
-                </div>
-                <div class="occupation">
-                  <img class="vector-icon2" alt="" src="{% static 'images/vector3.svg' %}" />
-
-                  <div class="experience">Data Scientist</div>
-                </div>
-                <div class="level1">
-                  <img
-                    class="bilightning-charge-fill-icon"
-                    alt=""
-                    src="{% static 'images/bilightningchargefill1.svg' %}"
-                  />
-
-                  <div class="experience">Senior Level</div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="profile1" target="_blank">
-            <div class="profile-description8">
-              <div class="container">
-                <div class="name9">
-                  <b class="arman-smagulov">Nikita Popov</b>
-                </div>
-                <div class="occupation">
-                  <img class="vector-icon2" alt="" src="{% static 'images/vector4.svg' %}" />
-
-                  <div class="experience">Cybersecurity Analyst</div>
-                </div>
-                <div class="level1">
-                  <img
-                    class="bilightning-charge-fill-icon"
-                    alt=""
-                    src="{% static 'images/bilightningchargefill2.svg' %}"
-                  />
-
-                  <div class="experience">Senior Level</div>
-                </div>
-              </div>
-            </div>
-          </a>
+          {% endfor %}
         </div>
       </div>
       <div class="biinfinity">

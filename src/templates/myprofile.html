@@ -55,7 +55,7 @@
     <div class="page">
         <aside>
             <div class="profile-info">
-                <img src="../static/{{ image }}" alt="profile-img">
+                <img src="../{{ image }}" alt="profile-img">
                 <div>
                     <p><b>About</b> me:</p>
                     <p>{{ about }}</p>
@@ -181,284 +181,23 @@
                         </div>
                         <div class="calendar">
                             <div class="calendar-div">
+                            <form action="{% url 'api:my-profile' %}" method="POST" class="form">
+                                {% csrf_token %}
                                 <table>
+                                  {% for row in table_data %}
                                     <tr>
+                                      {% for cell in row %}
                                         <td>
-                                            <p></p>
-                                            <h3></h3>
+                                              <button type="submit" name="button_value" value="{{ row.0 }}" id="myButton" style="border: none; background: none; padding: 0; cursor: pointer; text-align: left; width: 100%; height: 100%;">
+                                                <p>{{ cell.value }}</p>
+                                                <h3></h3>
+                                              </button>
                                         </td>
-                                        <td>
-                                            <p>SUN</p>
-                                            <h3>21</h3>
-                                        </td>
-                                        <td>
-                                            <p>MON</p>
-                                            <h3>22</h3>
-                                        </td>
-                                        <td>
-                                            <p>TUE</p>
-                                            <h3>23</h3>
-                                        </td>
-                                        <td>
-                                            <p>WED</p>
-                                            <h3>24</h3>
-                                        </td>
-                                        <td>
-                                            <p>THU</p>
-                                            <h3>25</h3>
-                                        </td>
-                                        <td>
-                                            <p>FRI</p>
-                                            <h3>26</h3>
-                                        </td>
-                                        <td>
-                                            <p>SAT</p>
-                                            <h3>27</h3>
-                                        </td>
-                                        <td>
-                                            <p>SUN</p>
-                                            <h3>28</h3>
-                                        </td>
-                                        <td>
-                                            <p>MON</p>
-                                            <h3>29</h3>
-                                        </td>
-                                        <td>
-                                            <p>TUE</p>
-                                            <h3>30</h3>
-                                        </td>
+                                      {% endfor %}
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <p>9 AM</p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>12 AM</p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>3 PM</p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>5 PM</p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>7 PM</p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                        <td>
-                                            <p></p>
-                                            <h3></h3>
-                                        </td>
-                                    </tr>
+                                  {% endfor %}
                                 </table>
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -601,7 +340,14 @@
         </div>
     </div>
 </footer>
+<script>
+  const button = document.getElementById('myButton');
 
+  button.addEventListener('click', function() {
+    button.style.backgroundColor = 'grey';
+    button.disabled = true; // Optional: Disable the button to prevent further clicks
+  });
+</script>
 <script src="../static/js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>

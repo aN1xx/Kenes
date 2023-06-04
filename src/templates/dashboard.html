@@ -42,9 +42,9 @@
             <aside>
                 <div>
                     <div class="profile">
-                        <img alt="profilte-img" src="{% static 'images/avatar-dashboard.jpg' %}">
+                        <img alt="profilte-img" src="../{{image}}">
                         <span>
-                            <h2>Assel Sadykova</h2>
+                            <h2>{{ full_name }}</h2>
                             <a href="{% url 'api:my-profile' %}">View Profile</a>
                         </span>
                     </div>
