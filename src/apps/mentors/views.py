@@ -46,6 +46,7 @@ def sign_up(request):
         password = request.POST['password']
         try:
             user = User.objects.create_user(username=username, password=password)
+            Mentor.objects.create(user=user)
 
         except Exception:
             error_message = "This username is taken"
@@ -120,10 +121,25 @@ def mentor_12(request):
 
 
 def mentor_13(request):
+    # mentor = Mentor.objects.get(user=request.user)
+    # if request.method == 'POST':
+    #     try:
+    #         mentor.save(update_fields=['full_name', 'gender', 'location'])
+    #     except Exception as e:
+    #         print(f"Couldn't save the data: {e}")
     return render(request, 'MentorsStep13.html')
 
 
 def mentor_14(request):
+    # mentor = Mentor.objects.get(user=request.user)
+    # if request.method == 'POST':
+    #     mentor.full_name = request.POST['prompt1']
+    #     mentor.gender = request.POST['options4']
+    #     mentor.location = f"{request.POST['option112'], request.POST['option10']}"
+    #     try:
+    #         mentor.save(update_fields=['full_name', 'gender', 'location'])
+    #     except Exception as e:
+    #         print(f"Couldn't save the data: {e}")
     return render(request, 'MentorsStep14.html')
 
 
@@ -142,7 +158,17 @@ def landing_page_after(request):
 
 @login_required
 def my_profile(request):
-    return render(request, 'myprofile.html')
+    mentor = Mentor.objects.get(user=request.user)
+    data = {
+        'full_name': mentor.full_name,
+        'about': mentor.about,
+        'occupation': mentor.occupation,
+        'grade': mentor.grade,
+        'experience': mentor.experience,
+        'image': mentor.profile_picture,
+    }
+    print(data)
+    return render(request, 'myprofile.html', data)
 
 
 @login_required

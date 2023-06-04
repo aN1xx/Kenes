@@ -43,7 +43,7 @@
     <div class="cover-background">
         <div class="cover-text">
             <span>
-                <h2>Assel Sadykova</h2>
+                <h2>{{ full_name }}</h2>
                 <p>Almaty, Kazakhstan</p>
             </span>
             <span>
@@ -55,13 +55,13 @@
     <div class="page">
         <aside>
             <div class="profile-info">
-                <img src="{% static 'images/myLoginProfileImg.png' %}" alt="profile-img">
+                <img src="../static/{{ image }}" alt="profile-img">
                 <div>
                     <p><b>About</b> me:</p>
-                    <p>Female, 28 years</p>
-                    <p><i class="fas fa-briefcase"></i>Business Analyst</p>
-                    <p><i class="fas fa-bolt"></i>Junior Level</p>
-                    <p><i class="fas fa-arrow-up"></i>1 years experience</p>
+                    <p>{{ about }}</p>
+                    <p><i class="fas fa-briefcase"></i>{{ occupation }}</p>
+                    <p><i class="fas fa-bolt"></i>{{grade}}</p>
+                    <p><i class="fas fa-arrow-up"></i>{{experience}} years experience</p>
                 </div>
             </div>
 

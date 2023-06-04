@@ -27,7 +27,7 @@
                 </div>
                 <div class="nav-controller">
                     <a href=""><i class="fas fa-bell"></i></a>
-                    <a href="./myprofile.html"><i class="fas fa-user"></i></a>
+                    <a href="{% url 'api:my-profile' %}"><i class="fas fa-user"></i></a>
                     <select>
                         <option>KAZAKH</option>
                         <option>RUSSIA</option>
@@ -45,7 +45,7 @@
                         <img alt="profilte-img" src="{% static 'images/avatar-dashboard.jpg' %}">
                         <span>
                             <h2>Assel Sadykova</h2>
-                            <a href="./myprofile.html">View Profile</a>
+                            <a href="{% url 'api:my-profile' %}">View Profile</a>
                         </span>
                     </div>
                     <hr>

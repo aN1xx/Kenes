@@ -16,10 +16,18 @@ class Mentor(
 
     user: 'User' = models.ForeignKey(
         'users.User',
-        on_delete=models.SET_NULL,
+        on_delete=models.CASCADE,
         related_name='mentors',
+        null=False,
+        blank=False
+    )
+
+    profile_picture = models.ImageField(upload_to='images/')
+
+    gender: str = models.CharField(
+        max_length=20,
+        blank=True,
         null=True,
-        blank=True
     )
 
     about: str = models.CharField(
@@ -30,19 +38,28 @@ class Mentor(
 
     occupation: str = models.CharField(
         max_length=100,
-        blank=False,
-        null=False,
+        blank=True,
+        null=True,
     )
 
     grade: str = models.CharField(
         max_length=100,
         choices=GradeTypes.choices,
-        blank=False,
+        blank=True,
         null=True,
     )
 
     description: str = models.TextField(
         max_length=300,
+        blank=True,
+        null=True,
+    )
+
+    experience: str = models.IntegerField(blank=True, null=True)
+
+    location: str = models.CharField(
+        max_length=100,
+        choices=GradeTypes.choices,
         blank=True,
         null=True,
     )
