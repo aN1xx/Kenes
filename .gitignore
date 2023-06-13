@@ -2,3 +2,6 @@ django-env
 .idea
 venv
 __pycache__
+src/apps/mentors/__pycache__
+src/apps/users/__pycache__
+src/apps/common/__pycache__

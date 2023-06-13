@@ -188,7 +188,7 @@
                                     <tr>
                                       {% for cell in row %}
                                         <td>
-                                              <button type="submit" name="button_value" value="{{ row.0 }}" id="myButton" style="border: none; background: none; padding: 0; cursor: pointer; text-align: left; width: 100%; height: 100%;">
+                                              <button  name="button_value" value="{{ row.0 }}" class="mybutton" style="border: none; background: none; padding: 0; cursor: pointer; text-align: left; width: 100%; height: 100%;">
                                                 <p>{{ cell.value }}</p>
                                                 <h3></h3>
                                               </button>
@@ -340,13 +340,25 @@
         </div>
     </div>
 </footer>
-<script>
-  const button = document.getElementById('myButton');
+<script type="text/javascript">
+{#  const button = document.getElementById('myButton');#}
+const buttons = document.querySelectorAll(".mybutton")
+const buttonsArray = Array.from(buttons)
 
-  button.addEventListener('click', function() {
-    button.style.backgroundColor = 'grey';
-    button.disabled = true; // Optional: Disable the button to prevent further clicks
-  });
+
+{#  button.addEventListener('click', function() {#}
+{#    button.style.backgroundColor = 'grey';#}
+{#    button.disabled = true; // Optional: Disable the button to prevent further clicks#}
+{#  });#}
+
+buttons.forEach((el)=>{
+el.addEventListener("click", (e)=>{
+
+console.log(e.style.background)
+e.target.style.backgroundColor = "red"
+e.target.classList.add("active")
+})
+})
 </script>
 <script src="../static/js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

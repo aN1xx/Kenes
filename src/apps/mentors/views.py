@@ -122,25 +122,36 @@ def mentor_12(request):
 
 
 def mentor_13(request):
-    # mentor = Mentor.objects.get(user=request.user)
-    # if request.method == 'POST':
-    #     try:
-    #         mentor.save(update_fields=['full_name', 'gender', 'location'])
-    #     except Exception as e:
-    #         print(f"Couldn't save the data: {e}")
+    mentor = Mentor.objects.get(user=request.user)
+    if request.method == 'POST':
+        try:
+            mentor.save(update_fields=['full_name', 'gender', 'location'])
+        except Exception as e:
+            print(f"Couldn't save the data: {e}")
     return render(request, 'MentorsStep13.html')
 
 
+@csrf_exempt
 def mentor_14(request):
-    # mentor = Mentor.objects.get(user=request.user)
-    # if request.method == 'POST':
-    #     mentor.full_name = request.POST['prompt1']
-    #     mentor.gender = request.POST['options4']
-    #     mentor.location = f"{request.POST['option112'], request.POST['option10']}"
-    #     try:
-    #         mentor.save(update_fields=['full_name', 'gender', 'location'])
-    #     except Exception as e:
-    #         print(f"Couldn't save the data: {e}")
+    mentor = Mentor.objects.get(user=request.user)
+    if request.method == 'POST':
+        fio = request.POST.get('prompt1', '').split(' ')
+        if len(fio) > 0:
+            mentor.first_name = fio[0]
+        elif len(fio) > 1:
+            mentor.first_name = fio[0]
+            mentor.last_name = fio[1]
+        else:
+            mentor.middle_name = fio[2]
+        mentor.gender = request.POST['options4']
+        mentor.location = f"{request.POST['option112'], request.POST['option10']}"
+        try:
+            mentor.save(update_fields=['full_name', 'gender', 'location'])
+        except Exception as e:
+            error_message = 'Возникла проблема при сохранении этих данных'
+            request.session['error_message'] = error_message
+            redirect('/mentor-14/')
+            print(f"Couldn't save the data: {e}")
     return render(request, 'MentorsStep14.html')
 
 
