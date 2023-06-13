@@ -346,15 +346,12 @@ const buttons = document.querySelectorAll(".mybutton")
 const buttonsArray = Array.from(buttons)
 
 
-{#  button.addEventListener('click', function() {#}
-{#    button.style.backgroundColor = 'grey';#}
-{#    button.disabled = true; // Optional: Disable the button to prevent further clicks#}
-{#  });#}
+
 
 buttons.forEach((el)=>{
 el.addEventListener("click", (e)=>{
-
-console.log(e.style.background)
+e.preventDefault()
+console.log(e.target.style.background)
 e.target.style.backgroundColor = "red"
 e.target.classList.add("active")
 })
