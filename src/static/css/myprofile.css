@@ -435,3 +435,117 @@ tr td {
 tr td:hover {
     background: #EFF6FF;
 }
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal_hidden{
+    display: none;
+}
+
+.modal_close{
+    background: transparent;
+    position: absolute;
+    top: 10;
+    right: 0;
+    border: none;
+}
+.modal_container{
+    position: relative;
+    margin: 15% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 280px;
+    padding: 37px 21px;
+    background: #F3F2F8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.modal_checkbox{
+    width: 22px;
+    height: 22px;
+    background: #F3F2F8;
+    border: 1px solid #05195E;
+    border-radius: 6px;
+}
+
+.modal_divider{
+    border: 1px solid #05195E;
+}
+
+.modal_button{
+    width: 125px;
+    height: 36px;
+    padding: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+    background: #3C21B2;
+    border-radius: 5px;
+    margin: 0 auto;
+    color: #FFFFFF;
+    margin-top: 30px;
+}
+
+.modal_subtext{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #05195E;
+}
+
+.modal_title{
+    padding: 10px;
+}
+
+.modal_checkboxWrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+.modal_text{
+    color: #05195E;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    /* identical to box height, or 100% */
+    text-align: center;
+}
+.modal_link{
+    display: flex;
+    flex-direction: column;
+    gap: 12.5px;
+    margin-top: 25px;
+}
+
+.modal_input{
+    outline: none;
+}
+.modal_label{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #05195E;
+}

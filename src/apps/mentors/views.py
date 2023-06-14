@@ -213,6 +213,7 @@ def other_profile(request):
     return render(request, 'otherprofile.html')
 
 
+@login_required
 def search(request):
     mentors = Mentor.objects.all()
     for i in mentors:
