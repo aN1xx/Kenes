@@ -194,16 +194,16 @@ def my_profile(request):
         'table_data': table_data,
     }
     if request.method == 'POST':
-        button_value = request.POST.get('button_value')
-        print(button_value)
-        if 'AM' in button_value:
-            slot_time = button_value.replace(' AM', ':00')
-        else:
-            int_time = int(button_value[0]) + 12
-            slot_time = str(int_time) + ':00'
-
-        _, booking = Booking.objects.get_or_create(user=request.user, slot_date=timezone.now().date(), slot_time=slot_time)
-        print(f"SUCCESSFULLY BOOKED: {booking}")
+        # button_value = request.POST.get('button_value')
+        # print(button_value)
+        # if 'AM' in button_value:
+        #     slot_time = button_value.replace(' AM', ':00')
+        # else:
+        #     int_time = int(button_value[0]) + 12
+        #     slot_time = str(int_time) + ':00'
+        #
+        # _, booking = Booking.objects.get_or_create(user=request.user, slot_date=timezone.now().date(), slot_time=slot_time)
+        # print(f"SUCCESSFULLY BOOKED: {booking}")
         return render(request, 'myprofile.html', data)
 
     return render(request, 'myprofile.html', data)
