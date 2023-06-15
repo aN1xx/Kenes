@@ -410,6 +410,7 @@ const buttons = document.querySelectorAll(".mybutton")
 const buttonsArray = Array.from(buttons)
 const modal = document.querySelector('.modal')
 const closeModalButton = document.querySelector('.modal_close')
+let currentCell;
 
 window.addEventListener("DOMContentLoaded", () => {
     modal.classList.add('modal_hidden');
@@ -418,15 +419,16 @@ window.addEventListener("DOMContentLoaded", () => {
 closeModalButton.addEventListener("click", (e)=>{
     e.preventDefault()
     modal.classList.add('modal_hidden')
+    currentCell.style.backgroundColor = "white"
 })
 
 buttons.forEach((el)=>{
 el.addEventListener("click", (e)=>{
 e.preventDefault()
-
+currentCell = e.target.closest('td')
 e.target.closest('td').style.backgroundColor = "grey"
 e.target.classList.add("active")
-    modal.classList.remove('modal_hidden')
+modal.classList.remove('modal_hidden')
 })
 })
 </script>
