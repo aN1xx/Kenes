@@ -181,15 +181,65 @@
                         </div>
                         <div class="calendar">
                             <div class="calendar-div">
-                            <form action="{% url 'api:my-profile' %}" method="POST" class="form">
-                                {% csrf_token %}
+{#                            <form action="{% url 'api:my-profile' %}" method="POST" class="form">#}
+{#                                {% csrf_token %}#}
                                 <table>
+                                <tr>
+                                        <td>
+                                            <p></p>
+                                            <h3></h3>
+                                        </td>
+                                        <td>
+                                            <p>SUN</p>
+                                            <h3>21</h3>
+                                        </td>
+                                        <td>
+                                            <p>MON</p>
+                                            <h3>22</h3>
+                                        </td>
+                                        <td>
+                                            <p>TUE</p>
+                                            <h3>23</h3>
+                                        </td>
+                                        <td>
+                                            <p>WED</p>
+                                            <h3>24</h3>
+                                        </td>
+                                        <td>
+                                            <p>THU</p>
+                                            <h3>25</h3>
+                                        </td>
+                                        <td>
+                                            <p>FRI</p>
+                                            <h3>26</h3>
+                                        </td>
+                                        <td>
+                                            <p>SAT</p>
+                                            <h3>27</h3>
+                                        </td>
+                                        <td>
+                                            <p>SUN</p>
+                                            <h3>28</h3>
+                                        </td>
+                                        <td>
+                                            <p>MON</p>
+                                            <h3>29</h3>
+                                        </td>
+                                        <td>
+                                            <p>TUE</p>
+                                            <h3>30</h3>
+                                        </td>
+                                    </tr>
                                   {% for row in table_data %}
                                     <tr>
                                       {% for cell in row %}
                                         <td>
                                               <button  name="button_value" value="{{ row.0 }}" class="mybutton" style="border: none; background: none; padding: 0; cursor: pointer; text-align: left; width: 100%; height: 100%;">
-                                                <p>{{ cell }}</p>
+                                                {% if cell == "True" %}
+                                                  <p style="background-color: gray"></p>
+                                                    {% elif cell != "False" %}
+                                                  <p>{{ cell }}</p>
+                                                    {% endif %}
                                                 <h3></h3>
                                               </button>
                                         </td>
@@ -197,7 +247,7 @@
                                     </tr>
                                   {% endfor %}
                                 </table>
-                            </form>
+{#                            </form>#}
                             </div>
                         </div>
                     </div>
@@ -298,15 +348,16 @@
         </div>
     </div>
 </div>
-<div class="modal ">
-    <form class="modal_container">
+<div class="modal">
+    <form action="{% url 'api:my-profile' %}" method="POST" class="modal_container">
+        {% csrf_token %}
         <button class="modal_close"><img src="{% static 'images/close-circle.svg' %}" alt="close-circle"></button>
         <h3 class="modal_text modal_title">Meeting name</h3>
         <h3 class="modal_text">9:00 - 9:30, Wednesday June 21</h3>
         <div class="modal_divider"></div>
         <div class="modal_link">
             <p class="modal_label">Link to the meeting room</p>
-            <input type="url" class="modal_text modal_input"/>
+            <input type="url" class="modal_text modal_input" required/>
             <div class="modal_checkboxWrapper"><input type="checkbox" /><p class="modal_subtext">Cancel meeting</p></div>
         </div>
         <button class="modal_button" type="submit">Join the meeting</button>

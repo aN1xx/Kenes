@@ -177,7 +177,7 @@ def landing_page_after(request):
 def my_profile(request):
     mentor = Mentor.objects.get(user=request.user)
     table_data = [
-        ['9 AM', '', '', '', '', '', '', '', '', '', ''],
+        ['9 AM', 'True', '', '', '', '', '', '', '', '', ''],
         ['12 AM', '', '', '', '', '', '', '', '', '', ''],
         ['3 PM', '', '', '', '', '', '', '', '', '', ''],
         ['5 PM', '', '', '', '', '', '', '', '', '', ''],
@@ -195,6 +195,7 @@ def my_profile(request):
     }
     if request.method == 'POST':
         button_value = request.POST.get('button_value')
+        print(button_value)
         if 'AM' in button_value:
             slot_time = button_value.replace(' AM', ':00')
         else:
@@ -210,7 +211,18 @@ def my_profile(request):
 
 @login_required
 def other_profile(request):
-    return render(request, 'otherprofile.html')
+    table_data = [
+        ['9 AM', 'True', '', '', '', '', '', '', '', '', ''],
+        ['12 AM', '', '', '', '', '', '', '', '', '', ''],
+        ['3 PM', '', '', '', '', '', '', '', '', '', ''],
+        ['5 PM', '', '', '', '', '', '', '', '', '', ''],
+        ['7 PM', '', '', '', '', '', '', '', '', '', ''],
+    ]
+    booked = []
+    data = {
+        'table_data': table_data,
+    }
+    return render(request, 'otherprofile.html', data)
 
 
 @login_required
